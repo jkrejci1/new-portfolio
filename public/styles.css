@@ -36,7 +36,8 @@ p {
     /*Creating padding which is effected by what's in the banner like the text*/
     text-align: center;
     color: black;
-    background: white;
+    background-image: url("banner-background.jpg");
+    background-size: cover;
     position: absolute;
     bottom: 0;
     width: 100%;

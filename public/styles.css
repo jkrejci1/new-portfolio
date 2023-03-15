@@ -22,8 +22,8 @@ body {
     padding: 75px;
     text-align: center;
     color: black;
-    background: white;
-    
+    background-image: url("banner-background.jpg"); /*COULDN'T ACCESS IMG OUTSIDE THE PUBLIC FOLDER!!*/
+    background-size: cover;
   }
 
 /*Main Body*/

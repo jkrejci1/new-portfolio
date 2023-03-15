@@ -1,29 +1,42 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
+    <!--Head portion of webpage-->
     <head>
         <!--MAY NEED TO EDIT OR DO MORE BELOW FOR FITTING ALL DEVICES-->
         <meta charset="UTF-8"> 
         <!--Used to make page responsive-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="styles.css">
+
+        <!--JQuery for cross page header and footer-->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
         <title>Krejci Portfolio</title>
+
+        <script>
+        //Load the header and footer (notice we need to access the partials folder to get to them!!)
+        $(function(){
+            $("#header").load("partials/header.html"); 
+            $("#footer").load("partials/footer.html"); 
+          });
+          </script> 
     </head>
+
+    <!--Body portion of the webpage -->
     <body>
+        <!--Insert the header-->
+        <div id="header"><</div>
 
-        <!--Banner-->
-        <div class="header">
-            <h1>Jack Krejci</h1>
-            <h3>Welcome to my portfolio!</h3>
-        </div>
-
-        <!--Create wrapper here for what's going in the body-->
+        <!--Main body outside the header and footer-->
         <main>
             <p>My Fancy website!</p>
         </main>
 
-        <!--Footer-->
-        <div class="footer">
-            <h1>This is a footer</h1>
-        </div>
+        <!--Insert the header-->
+        <div id="footer"><</div>
+
     </body>
 </html>

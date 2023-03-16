@@ -45,19 +45,19 @@ p {
 
 .contactText {
   position: absolute;
-  left: 20%;
+  left: 17%;
 }
 
 .phoneText {
   position: absolute;
   color: black;
-  left: 23%;
+  left: 20%;
   top: 60%;
 }
 
 .emailText {
   position: absolute;
-  left: 21%;
+  left: 18%;
   top: 35%;
 }
 
@@ -65,7 +65,7 @@ p {
   position: absolute;
   width: 110px;
   height: 65px;
-  left: 48%;
+  left: 45%;
   top: 20%;
 }
 
@@ -73,7 +73,7 @@ p {
   position: absolute;
   width: 110px;
   height: 75px;
-  left: 57%;
+  left: 54%;
   top: 20%;
 }
 
@@ -82,7 +82,7 @@ p {
   position: absolute;
   width: 75px;
   height: 65px;
-  left: 68%;
+  left: 65%;
   top: 20%;
 }
 
@@ -90,7 +90,7 @@ p {
   position: absolute;
   width: 75px;
   height: 65px;
-  left: 78%;
+  left: 75%;
   top: 20%;
 }
 

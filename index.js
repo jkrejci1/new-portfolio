@@ -15,7 +15,8 @@ app.use(express.static('public'));
 //app.get('*', something) -> Is used to do something that effects all pages
 
 //Set view for html file (for html we use the file where the view is, unlike ejs where we'd use public folder instead!!)
-app.use(express.static(__dirname + '/views'));
+//Set view for ejs
+app.set('view engine', 'ejs')
 
 //Use the routes file for routing everything outside of making requirements
 app.use(routes);

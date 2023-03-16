@@ -7,10 +7,12 @@ const authController = require('../controller/controller');
 
 //Variable for the routes
 const router = Router();
-
 //Get and post requests for pages
 //Get home page
 router.get('/', authController.home_get);
+router.get('/about', authController.about_get);
+router.get('/experience', authController.experience_get);
+
 
 //Export routes to be imported into index.js
 module.exports = router;

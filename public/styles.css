@@ -26,6 +26,42 @@ body {
     background-size: cover;
   }
 
+/*NavBar CSS*/
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: white;
+  color: black;
+}
+
+li a:active {
+  background-color: white;
+  color: black;
+}
+
+.active {
+  background-color: white;
+  color: black;
+}
+
 /*Main Body*/
 p {
     color: white;

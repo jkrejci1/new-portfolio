@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <!--MAY NEED TO EDIT OR DO MORE BELOW FOR FITTING ALL DEVICES-->
+        <meta charset="UTF-8"> 
+        <!--Used to make page responsive-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../public/styles.css">
+        <title>Krejci Portfolio</title>
+    </head>
+    <body>
+
+        <!--Banner-->
+        <div class="header">
+            <h1>Jack Krejci</h1>
+            <h3>Welcome to my portfolio!</h3>
+        </div>
+
+        <nav>
+            <ul class="topnav">
+                <li class="link" id="home"><a href="/">Home</a></li>
+                <li class="link" id="about"><a href="/about">About Me</a></li>
+                <li class="link" id="experience"><a href="/experience">Experience</a></li>
+            </ul>
+        </nav>
+    </body>
+
+    <script>
+        //JavaScript to find the current link in the navbar and set its class to active
+        
+        //NEED TO FIX
+        //Get the url and get the string 
+        /**
+        const activePage = window.location.pathname;
+        console.log(activePage.pathname) //.pathname gives you the current path we're on
+
+        //Now we need to get all the navlinks
+        const navLinks = document.querySelectorAll('.link')
+
+        console.log("Links", navLinks.classList)
+        //Set the link that contains the pathname as its href with a class named active
+        forEach(link => {
+            if(link.href.includes(`${activePage}`)) {
+                link.classList.add('active');
+            }
+        })
+        */
+
+        var selector = '.nav li';
+
+        $(selector).on('click', function(){
+            $(selector).removeClass('active');
+            $(this).addClass('active');
+        });
+    </script>
+</html>

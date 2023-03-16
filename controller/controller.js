@@ -5,3 +5,13 @@ var url = require('url');
 module.exports.home_get = (req, res) => {
     res.render('index')
 }
+
+module.exports.about_get = (req, res) => {
+    res.render('about')
+}
+
+module.exports.experience_get = (req, res) => {
+    res.render('experience')
+}
+
+

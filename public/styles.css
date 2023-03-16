@@ -79,10 +79,11 @@ p {
   top: 20%;
 }
 
+/*w 75, h 65*/
 .linkedInLogo {
   position: absolute;
-  min-width: 75px;
-  min-height: 65px;
+  width: 10%;
+  height: 60%;
   left: 68%;
   top: 20%;
 }

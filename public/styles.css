@@ -81,8 +81,8 @@ p {
 
 .linkedInLogo {
   position: absolute;
-  width: 75px;
-  height: 65px;
+  min-width: 75px;
+  min-height: 65px;
   left: 68%;
   top: 20%;
 }

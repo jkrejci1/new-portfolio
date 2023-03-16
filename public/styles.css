@@ -22,7 +22,6 @@ body {
     /*Creating padding which is effected by what's in the banner like the text*/
     padding: 75px;
     text-align: center;
-    color: black;
     background-image: url("banner-background.jpg"); /*COULDN'T ACCESS IMG OUTSIDE THE PUBLIC FOLDER!!*/
     background-size: cover;
   }
@@ -36,7 +35,6 @@ p {
 .footer {
     /*Creating padding which is effected by what's in the banner like the text*/
     text-align: center;
-    color: black;
     background-image: url("banner-background.jpg");
     background-size: cover;
     position: absolute;

@@ -64,12 +64,6 @@ li a:hover:not(.active) {
   color: black;
 }
 
-
-li a:active {
-  background-color: white;
-  color: black;
-}
-
 .active {
   background-color: white;
   color: black;

@@ -21,10 +21,17 @@ body {
 .header {
     /*Creating padding which is effected by what's in the banner like the text*/
     padding: 75px;
-    text-align: center;
+    position: relative;
     background-image: url("banner-background.jpg"); /*COULDN'T ACCESS IMG OUTSIDE THE PUBLIC FOLDER!!*/
     background-size: cover;
+    height: 10px;
   }
+
+#headName {
+  position: absolute;
+  left: 44%;
+  top: 40%;
+}
 
 /*NavBar CSS*/
 ul {
@@ -39,18 +46,24 @@ li {
   float: left;
 }
 
+/*Use ease out to fade back to original when done hovering*/
 li a {
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  transition: ease-out 0.62s;
 }
 
+/*Hover effects when hovering and after hovering (bottom 2)*/
 li a:hover:not(.active) {
+  animation-name: colorTrans;
+  animation-duration: .3s;
   background-color: white;
   color: black;
 }
+
 
 li a:active {
   background-color: white;
@@ -60,6 +73,19 @@ li a:active {
 .active {
   background-color: white;
   color: black;
+}
+
+/*Hover animation functions*/
+@keyframes colorTrans {
+  from {background-color: black;}
+  to {background-color: white;
+      color: black}
+}
+
+@keyframes colorBack {
+  from {background-color: white;}
+  to {background-color: black;
+      color: white}
 }
 
 /*Main Body*/

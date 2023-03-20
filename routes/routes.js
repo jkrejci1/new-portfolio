@@ -11,8 +11,8 @@ const router = Router();
 //Get home page
 router.get('/', authController.home_get);
 router.get('/about', authController.about_get);
+router.get('/education', authController.education_get);
 router.get('/experience', authController.experience_get);
-
 
 //Export routes to be imported into index.js
 module.exports = router;

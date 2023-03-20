@@ -15,6 +15,8 @@ body {
     padding-bottom: 100px; /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
     /*Need to set proper min height to where the footer is always at bottom*/
     min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
 }
 
 /*Header*/
@@ -29,8 +31,10 @@ body {
 
 #headName {
   position: absolute;
-  left: 44%;
-  top: 40%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); /*Causes text to still be centered when screen changes*/
+
 }
 
 /*NavBar CSS*/
@@ -90,34 +94,169 @@ p {
 /*Footer*/
 .footer {
     /*Creating padding which is effected by what's in the banner like the text*/
-    text-align: center;
+    /*text-align: center;*/
     background-image: url("banner-background.jpg");
     background-size: cover;
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 100px;
+    height: 120px; /*Needed to adjust as needed to leave no gap on bottom*/
   }
 
 .contactText {
   position: absolute;
-  left: 17%;
+  font-size: 20px;
 }
 
 .phoneText {
   position: absolute;
   color: black;
-  left: 20%;
-  top: 60%;
+  top: 40%;
 }
 
 .emailText {
   position: absolute;
-  left: 18%;
-  top: 35%;
+  top: 20%;
 }
 
-.githubLogo {
+.grid-footer {
+  display: grid;
+  gap: 5px 10px;
+  grid-template-columns: auto auto;
+  padding: 20px;
+  position: absolute;
+  right: 0px;
+  top: 0%;
+  height: 80px;
+  
+}
+
+.gridLogo {
+  padding: 0px;
+  /*background-image: url("images/linkedin.png"); USED FOR INDIVID SQUARE SIZES*/
+  width: 58px;
+  height: 40px;
+}
+
+/*Customized picture sizing for the logos*/
+.gridPicGit {
+  position: absolute;
+  top: 10%;
+  left: 16px;
+  width: 90px;
+  height: 50px;
+}
+
+.gridPicLeet {
+  position: absolute;
+  top: 10%;
+  left: 83px;
+  width: 82px;
+  height: 57px;
+}
+
+ .gridPicLinkedIn {
+  position: absolute;
+  top: 80%;
+  left: 36px;
+  width: 50px;
+  height: 50px;
+}
+
+.gridPicResume {
+  position: absolute;
+  top: 80%;
+  left: 105px;
+  width: 40px;
+  height: 50px;
+} 
+
+
+/* Use a media query to add a breakpoint at 800px: */
+@media screen and (min-width: 500px) {
+
+  /*FOOTER*/
+
+  /*MIGHT WANT TO DO THIS CENTERING OF THE TEXT FOR FOOTER WHEN WE REACH ABOUT 700PX*/
+  /* .contactText {
+    position: absolute;
+    font-size: 20px;
+    left: 50%;
+    top: 10px;
+    transform: translate(-50%, -50%); 
+
+  }
+  
+  .phoneText {
+    position: absolute;
+    color: black;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .emailText {
+    position: absolute;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  } */
+
+  .grid-footer {
+    display: grid;
+    gap: 5px 10px;
+    grid-template-columns: auto auto auto auto;
+    padding: 20px;
+    position: absolute;
+    right: 0px;
+    top: 0%;
+    height: 80px;
+    
+  }
+  
+  .gridLogo {
+    padding: 0px;
+    /*background-image: url("images/linkedin.png"); USED FOR INDIVID SQUARE SIZES*/
+    width: 58px;
+    height: 40px;
+    /*background-color: blue; FOR REF OF INDIVIDUAL SQAURES*/ 
+  }
+  
+  /*Customized picture sizing for the logos*/
+  .gridPicGit {
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    width: 90px;
+    height: 50px;
+  }
+  
+  .gridPicLeet {
+    position: absolute;
+    top: 50%;
+    left: 63px;
+    width: 82px;
+    height: 57px;
+  }
+  
+  .gridPicLinkedIn {
+    position: absolute;
+    top: 50%;
+    left: 150px;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .gridPicResume {
+    position: absolute;
+    top: 50%;
+    left: 215px;
+    width: 40px;
+    height: 50px;
+  }
+  }
+/*Photo Links*/
+/* .githubLogo {
   position: absolute;
   width: 110px;
   height: 65px;
@@ -133,7 +272,6 @@ p {
   top: 20%;
 }
 
-/*w 75, h 65*/
 .linkedInLogo {
   position: absolute;
   width: 75px;
@@ -148,6 +286,6 @@ p {
   height: 65px;
   left: 75%;
   top: 20%;
-}
+} */
 
 /*Add CSS for personal information, and images for profile links and possibly resume*/

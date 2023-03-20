@@ -19,7 +19,7 @@ body {
     padding: 0px;
 }
 
-/*Header*/
+/*Header PROBABLY START THE DROP DOWN MENU WHEN BELOW 470-500 PX*/
 .header {
     /*Creating padding which is effected by what's in the banner like the text*/
     padding: 75px;

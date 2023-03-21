@@ -11,18 +11,30 @@
     <body>
 
         <!--Banner-->
+        
         <div class="header">
             <h1 id="headName">Jack Krejci</h1>
-            <!--<h3>Welcome to my portfolio!</h3>-->
         </div>
-
-        <nav>
-            <ul class="topnav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Me</a></li>
-                <li><a href="/education">Education</a></li>
-                <li><a href="/experience">Experience</a></li>
-            </ul>
+    
+        <nav class="navbar">
+            <!--Brandname title-->
+            <div class="brand-title">Portfolio</div>
+            <!--Need to put hamburger menu before the navbar links!-->
+            <a href="#" class="toggle-button">
+                <!--Three spans for the three hamburger lines-->
+                <!--Span groups groups inline elements unlike div that groups block level elements!-->
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar-links">
+                <ul class="topnav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/education">Education</a></li>
+                    <li><a href="/experience">Experience</a></li>
+                </ul>
+            </div>
         </nav>
     </body>
 
@@ -33,7 +45,7 @@
 
         //Take all the links on the page to be able to compare to the current one we're on 
         const navLinks = document.querySelectorAll('nav a').forEach(link => {
-            console.log(link)
+            console.log("Link:", link)
             //If the pathname of a link in the loop matches the activePage, set that link to have the 'active' class to keep it white
             if (link.pathname == activePage) {
                 link.classList.add('active')
@@ -41,6 +53,20 @@
             
         });
 
+        //Code needed for if you click the toggle button to drop down menu
+        //Select first element in toggle button array
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        //Get the navbar links we have (only one as well select 0th)
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        console.log("navbar links:", navbarLinks)
+        
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active-menu')
+
+            //Checks what the class is for navbarLinks
+            console.log("navbar links:", navbarLinks)
+        })
 
     </script>
 </html>

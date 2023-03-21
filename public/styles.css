@@ -1,4 +1,4 @@
-/*TEST CSS*/
+/*CSS FOR HOME PAGE AND HEADER AND FOOTER*/
 
 /*Makes it to where there's no space around something like a banner for example*/
 * {
@@ -19,12 +19,12 @@ body {
     padding: 0px;
 }
 
+/**COMMENT OUT HEADER TO TRY AND FIX NAVBAR**/
 /*Header PROBABLY START THE DROP DOWN MENU WHEN BELOW 470-500 PX*/
-.header {
-    /*Creating padding which is effected by what's in the banner like the text*/
+  .header {
     padding: 75px;
     position: relative;
-    background-image: url("banner-background.jpg"); /*COULDN'T ACCESS IMG OUTSIDE THE PUBLIC FOLDER!!*/
+    background-image: url("banner-background.jpg"); 
     background-size: cover;
     height: 10px;
   }
@@ -33,44 +33,75 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%); /*Causes text to still be centered when screen changes*/
+  transform: translate(-50%, -50%); 
 
-}
+}  
 
 /*NavBar CSS*/
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: black;
+.brand-title {
+  font-size: 1.2rem;
+  margin: .5rem;
 }
 
-li {
-  float: left;
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: black;
+  color: white;
+}
+
+.navbar-links {
+  display: none;
+  width: 100%;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /*background-color: black;*/
+}
+
+.navbar-links li {
+  width: 100%;
+  list-style: none;
+  text-align: center;
 }
 
 /*Use ease out to fade back to original when done hovering*/
-li a {
+.navbar-links li a {
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  margin-top: 0;
+  padding: .5rem 1rem;
   text-decoration: none;
   transition: ease-out 0.62s;
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/
-li a:hover:not(.active) {
+
+.navbar-links li a:hover:not(.active) {
   animation-name: colorTrans;
   animation-duration: .3s;
   background-color: white;
   color: black;
 }
 
-.active {
+.navbar-links .active {
   background-color: white;
   color: black;
+  width: 100%;
+  /**display: flex;**/
+}
+
+/*When toggle button is pressed this css runs*/
+.navbar-links.active-menu {
+  display: flex;
+  transition: ease-out 0.62s;
 }
 
 /*Hover animation functions*/
@@ -84,6 +115,25 @@ li a:hover:not(.active) {
   from {background-color: white;}
   to {background-color: black;
       color: white}
+}
+
+/*Toggle button css*/
+.toggle-button {
+  position: absolute;
+  top: 10rem;
+  right: 45%;
+  display: flex; /*switch to flex to display the hamburger lines*/
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
 }
 
 /*Main Body*/
@@ -172,7 +222,7 @@ p {
 } 
 
 
-/* Use a media query to add a breakpoint at 800px: MAY NEED TO ADJUST THE BOXES BEHIND THE PICTURES SHOWN IN INSPECTION DEV TOOLS */
+/* Use a media query to cause this change at 500 pixles MOBILE FIRST*/
 @media screen and (min-width: 500px) {
 
   /*FOOTER*/
@@ -201,6 +251,101 @@ p {
     left: 50%;
     transform: translate(-50%, -50%); 
   } */
+  /*Need to display the links now as block and remove the hamburger menu*/
+ 
+  /*On bigger screen don't show hamburger menu*/
+  
+/*NavBar CSS*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  /*NEED TO MAKE IT NOT COLUMN TO GO TO ORIGINAL FLOW*/
+  flex-direction: row;
+}
+
+.navbar-links {
+  /*SET BACK TO AUTO SO LINKS GO BACK TO HOW THEY WERE BEFORE ADJUSTING ON MAIN MOBILE VERSION OF CSS*/
+  width: auto;
+  display: flex;
+}
+
+.brand-title {
+  font-size: 1.2rem;
+  margin: .5rem;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  /*background-color: black;*/
+}
+
+.navbar-links li {
+  list-style: none;
+  text-align: center;
+  width: auto;
+}
+
+/*Use ease out to fade back to original when done hovering*/
+.navbar-links li a {
+  display: block;
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+  transition: ease-out 0.62s;
+}
+
+/*Hover effects when hovering and after hovering (bottom 2)*/
+.navbar-links li a:hover:not(.active) {
+  animation-name: colorTrans;
+  animation-duration: .3s;
+  background-color: white;
+  color: black;
+}
+
+.navbar-links .active {
+  background-color: white;
+  color: black;
+  display: flex;
+}
+
+/*Hover animation functions*/
+@keyframes colorTrans {
+  from {background-color: black;}
+  to {background-color: white;
+      color: black}
+}
+
+@keyframes colorBack {
+  from {background-color: white;}
+  to {background-color: black;
+      color: white}
+}
+
+/*Toggle button css*/
+.toggle-button {
+  position: absolute;
+  top: .05rem;
+  right: 1rem;
+  display: none; /*switch to flex to display the hamburger lines*/
+  flex-direction: column;
+  justify-content: space-between;
+  width: 31px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
 
   .grid-footer {
     display: grid;

@@ -172,7 +172,7 @@ p {
 } 
 
 
-/* Use a media query to add a breakpoint at 800px: */
+/* Use a media query to add a breakpoint at 800px: MAY NEED TO ADJUST THE BOXES BEHIND THE PICTURES SHOWN IN INSPECTION DEV TOOLS */
 @media screen and (min-width: 500px) {
 
   /*FOOTER*/

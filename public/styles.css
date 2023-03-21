@@ -55,6 +55,7 @@ body {
 .navbar-links {
   display: none;
   width: 100%;
+
 }
 
 .navbar-links ul {
@@ -77,9 +78,8 @@ body {
   display: block;
   color: white;
   margin-top: 0;
-  padding: .5rem 1rem;
+  padding: .85rem 1rem;
   text-decoration: none;
-  transition: ease-out 0.62s;
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/
@@ -101,7 +101,7 @@ body {
 /*When toggle button is pressed this css runs*/
 .navbar-links.active-menu {
   display: flex;
-  transition: ease-out 0.62s;
+  transition: transform 350ms ease-in;
 }
 
 /*Hover animation functions*/
@@ -256,6 +256,7 @@ p {
   /*On bigger screen don't show hamburger menu*/
   
 /*NavBar CSS*/
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -299,6 +300,10 @@ p {
   padding: 1rem;
   text-decoration: none;
   transition: ease-out 0.62s;
+  padding: 1rem 1rem;
+
+  /*IF WE CHANGE THE NAVBAR TITLE WE MAY NEED TO ADJUST THIS (IF WRAPPING WHERE NAVBAR LEAVES SPACE BETWEEN LINKS)*/
+
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/

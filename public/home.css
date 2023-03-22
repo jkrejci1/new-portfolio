@@ -29,7 +29,15 @@ body, main {
     min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
     margin: 0px;
     padding: 0px;
-    background-size: 150%;
+    background-size: 400%;
+    animation: bg-animation 300s infinite alternate;
+
+}
+
+/*Background animation*/
+@keyframes bg-animation {
+    0% {background-position: left}
+    100% {background-position: right;}
 }
 
 /*Main Body CSS*/
@@ -39,25 +47,5 @@ p {
 
 /*When media screen is at least 500 px*/
 @media screen and (min-width: 500px) {
-    body, main {
-        background-image: var(--gradient);
-        /*background-size: cover;*/
-        position: relative;
-        /*Creating bottom padding so there's no overlap with the footer with body content*/
-        padding-bottom: 100px; /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
-        /*Need to set proper min height to where the footer is always at bottom*/
-        min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
-        margin: 0px;
-        padding: 0px;
-        background-size: 200%;
-        animation: bg-animation 240s infinite alternate; /*Only turn on animation for non mobile to not slow it down*/
-    
-    }
-    
-    /*Background animation*/
-    @keyframes bg-animation {
-        0% {background-position: left}
-        100% {background-position: right;}
-    }
 
 }

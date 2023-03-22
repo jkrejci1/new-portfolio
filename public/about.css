@@ -30,7 +30,7 @@ body, main {
     margin: 0px;
     padding: 0px;
     background-size: 400%;
-    animation: bg-animation 240s infinite alternate;
+    animation: bg-animation 300s infinite alternate;
 
 }
 

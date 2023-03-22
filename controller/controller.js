@@ -14,8 +14,8 @@ module.exports.education_get = (req, res) => {
     res.render('education')
 }
 
-module.exports.experience_get = (req, res) => {
-    res.render('experience')
+module.exports.projects_get = (req, res) => {
+    res.render('projects')
 }
 
 

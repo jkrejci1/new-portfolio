@@ -1,0 +1,25 @@
+/*CSS FILE FOR THE PROJECTS PAGE*/
+/*Makes it to where there's no space around something like a banner for example*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, main {
+    background-image: url("main-background.jpg");
+    background-size: cover;
+    position: relative;
+    /*Creating bottom padding so there's no overlap with the footer with body content*/
+    padding-bottom: 100px; /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
+    /*Need to set proper min height to where the footer is always at bottom*/
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+/*Main Body CSS*/
+p {
+    color: white;
+}

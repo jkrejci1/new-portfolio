@@ -7,18 +7,18 @@
     box-sizing: border-box;
 }
 
+/*
 body, main {
     background-image: url("main-background.jpg");
     background-size: cover;
     position: relative;
-    /*Creating bottom padding so there's no overlap with the footer with body content*/
-    padding-bottom: 100px; /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
-    /*Need to set proper min height to where the footer is always at bottom*/
+    padding-bottom: 100px; 
     min-height: 100vh;
     margin: 0px;
     padding: 0px;
 
 }
+*/
 
 /**COMMENT OUT HEADER TO TRY AND FIX NAVBAR**/
 /*Header PROBABLY START THE DROP DOWN MENU WHEN BELOW 470-500 PX*/
@@ -138,9 +138,11 @@ body, main {
 }
 
 /*Main Body*/
+/*
 p {
     color: white;
 }
+*/
 
 /*Footer*/
 .footer {

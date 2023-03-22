@@ -41,7 +41,7 @@ body, main {
     min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
     margin: 0px;
     padding: 0px;
-    background-size: 200%;
+    background-size: 150%;
     animation: bg-animation 240s infinite alternate;
 
 }

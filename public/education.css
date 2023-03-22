@@ -13,8 +13,8 @@
         rgb(134, 134, 248),
         #c471ed,
         rgb(235, 103, 235),
-        rgb(252, 104, 104),
-        #f64f59
+        #f64f59,
+        rgb(255, 83, 83)
         
     );
 
@@ -41,10 +41,11 @@ body, main {
     min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
     margin: 0px;
     padding: 0px;
-    background-size: 400%;
+    background-size: 200%;
     animation: bg-animation 240s infinite alternate;
 
 }
+
 /*Background animation*/
 @keyframes bg-animation {
     0% {background-position: left}

@@ -42,7 +42,23 @@ body, main {
 
 /*Main Body CSS*/
 p {
+    position: relative;
     color: white;
+}
+
+/*Slider CSS*/
+.swiper {
+    /*Width of what the swiper covers*/
+    width: 100%;
+
+    /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
+    max-height: 700px;
+}
+
+.swiper-slide img{
+    width: 100%;
+    /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/
+    aspect-ratio: 5/2;
 }
 
 /*When media screen is at least 500 px*/

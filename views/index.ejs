@@ -10,10 +10,12 @@
         <!--Used to make page responsive-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="home.css">
-
         <title>Krejci Portfolio</title>
-
-
+        <!--Link for the swiper for the home page-->
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
     </head>
 
     <!--Body portion of the webpage -->
@@ -22,15 +24,53 @@
         <!--Insert the header using ejs-->
         <%- include('partials/header'); -%>
 
-        
+
         <!--Main body outside the header and footer-->
         <main>
-            <p>Home Page!</p>
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="images/binary.png"></div>
+                    <div class="swiper-slide"><img src="images/math.jfif"></div>
+                    <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
+                    <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            
+            </div>
+            <!--Create auto slider for summarizing purposes-->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+            <!--Create Welcome Message PROBABLY GONNA WANT SOME TAGS FOR EITHER COLUMNS OR FLEXBOX UNLESS WE DON'T NEED IT FOR PHONE?-->
+            <h1>Welcome To Jack Krejci's Portfolio</h1>
         </main>
 
 
         <!--Insert the footer using ejs-->
         <%- include('partials/footer'); -%>
 
+    <script>
+        const swiper = new Swiper('.swiper', {
+            //Autoplay delay in milliseconds
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // Optional parameters
+            loop: true,
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
     </body>
 </html>

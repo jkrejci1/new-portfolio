@@ -7,7 +7,7 @@
     box-sizing: border-box;
 }
 
-body {
+body, main {
     background-image: url("main-background.jpg");
     background-size: cover;
     position: relative;
@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
     margin: 0px;
     padding: 0px;
-    position: relative;
+
 }
 
 /**COMMENT OUT HEADER TO TRY AND FIX NAVBAR**/

@@ -17,18 +17,6 @@
         rgb(255, 83, 83)
         
     );
-
-    /* ORIGINAL
-    --gradient: linear-gradient(
-        45deg,
-        #845ec2,
-        #d65db1,
-        #ff6f91,
-        #ff9671,
-        #ffc75f,
-        #f9f871
-    );
-    */
 }
 
 body, main {
@@ -41,7 +29,7 @@ body, main {
     min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
     margin: 0px;
     padding: 0px;
-    background-size: 150%;
+    background-size: 400%;
     animation: bg-animation 240s infinite alternate;
 
 }
@@ -55,4 +43,9 @@ body, main {
 /*Main Body CSS*/
 p {
     color: white;
+}
+
+/*When media screen is at least 500 px*/
+@media screen and (min-width: 500px) {
+
 }

@@ -20,7 +20,7 @@
     );
 }
 
-body, main {
+body {
     background-image: var(--gradient);
     /*background-size: cover;*/
     position: relative;
@@ -33,11 +33,6 @@ body, main {
     background-size: 400%;
     animation: bg-animation 200s infinite alternate;
 
-}
-
-main {
-    min-height: 100vh;
-    margin-top: 0;
 }
 
 /*Background animation*/

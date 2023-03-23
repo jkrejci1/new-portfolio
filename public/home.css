@@ -50,7 +50,8 @@ p {
 /*Slider CSS*/
 .swiper {
     /*Width of what the swiper covers*/
-    width: 80%;
+    width: 85%;
+    margin-top: 1.2rem;
 
     /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
     max-height: 700px;
@@ -67,7 +68,7 @@ p {
     display: flex;
     flex-direction: column; /*First have flex-direction be column for mobile devices*/
     /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     height: 100vh;
     align-items: center; /*Align box to the center*/
@@ -77,7 +78,7 @@ p {
 .box {
     font-family: Garamond, serif;
     background-color: white;
-    width: 80%;
+    width: 85%;
     text-align: center;
     height: auto;
 }

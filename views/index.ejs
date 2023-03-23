@@ -25,37 +25,35 @@
         <%- include('partials/header'); -%>
 
 
-        <!--Main body outside the header and footer-->
-        <main>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="images/binary.png"></div>
-                    <div class="swiper-slide"><img src="images/math.jfif"></div>
-                    <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
-                    <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
-                </div>
 
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
-            </div>
-            <!--Create auto slider for summarizing purposes-->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-            <!--Flexbox Layout for rest of website for this page-->
-            <div class="container">
-                <div class="box">
-                    <h1>Welcome To My Portfolio!</h1>
-                    <img class="jack-profile" src="images/jack-profile.png">
-                    <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
-                </div>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/binary.png"></div>
+                <div class="swiper-slide"><img src="images/math.jfif"></div>
+                <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
+                <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
             </div>
 
-        </main>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+        <!--Create auto slider for summarizing purposes-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+        <!--Flexbox Layout for rest of website for this page-->
+        <div class="container">
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+        </div>
+
 
 
         <!--Insert the footer using ejs-->

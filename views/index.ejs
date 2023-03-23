@@ -24,8 +24,6 @@
         <!--Insert the header using ejs-->
         <%- include('partials/header'); -%>
 
-
-
         <!-- Slider main container -->
         <div class="swiper">
             <!-- Additional required wrapper -->
@@ -47,17 +45,45 @@
 
         <!--Flexbox Layout for rest of website for this page-->
         <div class="container">
+
+            <!--First box with welcome message and image of me-->
             <div class="box">
                 <h1>Welcome To My Portfolio!</h1>
                 <img class="jack-profile" src="images/jack-profile.png">
                 <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
             </div>
+
+            <!--Box showcasing programming languages I have experience with-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+
+            <!--Box showcasing the web development skill I have experience with INCLUDE CLOUD EXPERIENCE HERE-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+
+            <!--Pennetration testing experience-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+
+            <!--Need to declare footer class here in order for it to show up-->
+            <div class="footer">
+                <%- include('partials/footer'); -%>
+            </div>
+            <!--Box showcasing other -->
         </div>
-
-
-
         <!--Insert the footer using ejs-->
-        <%- include('partials/footer'); -%>
+
+
+        
 
     <script>
         const swiper = new Swiper('.swiper', {

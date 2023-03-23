@@ -51,7 +51,7 @@ p {
 .swiper {
     /*Width of what the swiper covers*/
     width: 85%;
-    margin-top: 1.2rem;
+    margin-top: 0rem;
 
     /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
     max-height: 700px;
@@ -68,7 +68,7 @@ p {
     display: flex;
     flex-direction: column; /*First have flex-direction be column for mobile devices*/
     /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
-    margin-top: 1rem;
+    margin-top: -.25rem;
     margin-bottom: 0rem;
     height: 100vh;
     align-items: center; /*Align box to the center*/

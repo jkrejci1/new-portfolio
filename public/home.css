@@ -94,7 +94,7 @@ p {
 /*Paragraph in welcome message box*/
 #paragraph-intro {
     color: black;
-    font-weight: lighter;
+    font-weight: 700;
     /*font-size: 1rem;*/
 }
 

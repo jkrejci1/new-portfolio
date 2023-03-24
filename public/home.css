@@ -32,6 +32,7 @@ body {
     padding: 0px;
     background-size: 400%;
     animation: bg-animation 200s infinite alternate;
+    /*Set default font size for rems*/
 }
 
 /*Background animation*/
@@ -49,9 +50,8 @@ p {
 /*Slider CSS*/
 .swiper {
     /*Width of what the swiper covers*/
-    width: 85%;
+    width: 95%;
     margin-top: 0rem;
-
     /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
     max-height: 700px;
 }
@@ -77,7 +77,7 @@ p {
 .box {
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
-    width: 85%;
+    width: 95%;
     text-align: center;
     height: auto;
     overflow: wrap;
@@ -95,20 +95,19 @@ p {
 #paragraph-intro {
     color: black;
     font-weight: lighter;
-    font-size: small;
     /*font-size: 1rem;*/
 }
 
 .box-paragraph {
-    background-color: rgb(248, 248, 248);
     width: 95%;
     align-self: center;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 /*Picture of me in the wlecome message*/
 .jack-profile {
-    width: 40%;
+    width: 60%;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 50%;

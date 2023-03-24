@@ -23,34 +23,35 @@
 
         <!--Insert the header using ejs-->
         <%- include('partials/header'); -%>
-        <main>
-            <!-- Slider main container -->
-            <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide"><img src="images/binary.png"></div>
-                    <div class="swiper-slide"><img src="images/math.jfif"></div>
-                    <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
-                    <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
-                </div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            
+        
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="images/binary.png"></div>
+                <div class="swiper-slide"><img src="images/math.jfif"></div>
+                <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
+                <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
             </div>
-            <!--Create auto slider for summarizing purposes-->
-            <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-            <!--Flexbox Layout for rest of website for this page-->
-            <div class="container">
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+        </div>
+        <!--Create auto slider for summarizing purposes-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-                <!--First box with welcome message and image of me-->
-                <div class="box">
-                    <h1>Welcome To My Portfolio!</h1>
-                    <img class="jack-profile" src="images/jack-profile.png">
-                    <p id="paragraph-box">I am a junior level software engineer with a passion for problem solving, a skill
+        <!--Flexbox Layout for rest of website for this page-->
+        <div class="container">
+
+            <!--First box with welcome message and image of me-->
+            <div class="box" id="intro-box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <div class="box-paragraph">
+                    <p id="paragraph-intro">I am a junior level software engineer with a passion for problem solving, a skill
                         of mine that I’ve put to work for a long time, which is what opened the door 
                         for my passion in software engineering and mathematics. I have been building 
                         up a lot of skills over the years, but I am always open to learning new topics, 
@@ -59,30 +60,31 @@
                         CONTACT ME, -> (MAKE INTO SCROLL DOWN LINK) I’m up for the challenge!
                     </p>
                 </div>
+            </div>
 
-                <!--Box showcasing programming languages I have experience with-->
-                <div class="box">
-                    <h1>Welcome To My Portfolio!</h1>
-                    <img class="jack-profile" src="images/jack-profile.png">
-
-                </div>
-
-                <!--Box showcasing the web development skill I have experience with INCLUDE CLOUD EXPERIENCE HERE-->
-                <div class="box">
-                    <h1>Welcome To My Portfolio!</h1>
-                    <img class="jack-profile" src="images/jack-profile.png">
-                    <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
-                </div>
-
-                <!--Pennetration testing experience-->
-                <div class="box">
-                    <h1>Welcome To My Portfolio!</h1>
-                    <img class="jack-profile" src="images/jack-profile.png">
-                    <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
-                </div>
+            <!--Box showcasing programming languages I have experience with-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
 
             </div>
-        </main>
+
+            <!--Box showcasing the web development skill I have experience with INCLUDE CLOUD EXPERIENCE HERE-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+
+            <!--Pennetration testing experience-->
+            <div class="box">
+                <h1>Welcome To My Portfolio!</h1>
+                <img class="jack-profile" src="images/jack-profile.png">
+                <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
+            </div>
+
+        </div>
+
         <!--Insert the footer using ejs FOOTER WASNT SHOWING BEFORE BECAUSE THE CONTAINER ABOVE WASNT GOING PAST ONE PAGE CHECK FOR THAT IF IT HAPPENS AGAIN!!-->
         <%- include('partials/footer'); -%>
 

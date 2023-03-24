@@ -56,7 +56,7 @@
                         for my passion in software engineering and mathematics. I have been building 
                         up a lot of skills over the years, but I am always open to learning new topics, 
                         doing whatever I can and spending all the time I need in order to master them.
-                        For whatever technical help you need CONTACT ME, -> (MAKE INTO SCROLL DOWN LINK) 
+                        For whatever technical help you need <a href="" onclick="return false;" id="contact-me">contact me</a>
                         I’m up for the challenge!
                     </p>
                 </div>
@@ -64,21 +64,21 @@
 
             <!--Box showcasing programming languages I have experience with-->
             <div class="box">
-                <h1>Welcome To My Portfolio!</h1>
+                <h1>Programming Skills</h1>
                 <img class="jack-profile" src="images/jack-profile.png">
 
             </div>
 
             <!--Box showcasing the web development skill I have experience with INCLUDE CLOUD EXPERIENCE HERE-->
             <div class="box">
-                <h1>Welcome To My Portfolio!</h1>
+                <h1>Web Development Skills</h1>
                 <img class="jack-profile" src="images/jack-profile.png">
                 <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
             </div>
 
             <!--Pennetration testing experience-->
             <div class="box">
-                <h1>Welcome To My Portfolio!</h1>
+                <h1>Pennetration Testing Skills</h1>
                 <img class="jack-profile" src="images/jack-profile.png">
                 <p id="paragraph-box">I am a junior level software engineer ready to start off my career!</p>
             </div>
@@ -106,6 +106,17 @@
                 prevEl: '.swiper-button-prev',
             },
 
+        });
+
+        //Watch for the click event on the anchor tag, if clicked scroll to bottom of page
+        let footLink = document.getElementById("contact-me");
+
+        footLink.addEventListener("click", (e) => {
+            window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+
+            });
         });
     </script>
     </body>

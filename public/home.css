@@ -132,10 +132,39 @@ p {
     color: rgb(86, 26, 226)
 }
 
-/*Make skills boxes grid layout for the icons*/
-#skills-col {
+/*Make skills grid layout for icons*/
+.skill-box {
+    text-align: center;
+    font-size: 30px;
     display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    padding: 1rem;
+  }
+
+/*Direct sizing for the images*/
+.skill-img {
+    height: 150px;
+    width: 115px;
 }
+.skill-img-direct {
+    width: 100px;
+    height: 100px;
+}
+/*Needed to adjust the PHP logo to make it look better*/
+.skill-img-direct-php {
+    max-width: 105px;
+    min-height: 100px;
+}
+
+.skill-description {
+    color: black;
+    font-size: 1rem;
+    padding-top: 1%;
+}
+
 
 /*When media screen is at least 500 px*/
 @media screen and (min-width: 500px) {

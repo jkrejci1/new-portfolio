@@ -67,7 +67,7 @@
         
 
             <!--Box showcasing programming languages I have experience with-->
-            <div class="box programming" id="skills-col">
+            <div class="box programming reveal" id="skills-col">
                 <h1 id="skills-head">Programming</h1>
                 <div class="skill-box programming">
                     <div class="skill-img"><img class="skill-img-direct" src="images/programming-skills/python.png">
@@ -99,7 +99,7 @@
             </div>
 
             <!--Box showcasing the web development skill I have experience with INCLUDE CLOUD EXPERIENCE HERE-->
-            <div class="box web-dev" id="skills-col">
+            <div class="box web-dev reveal" id="skills-col">
                 <h1 id="skills-head">Web Development</h1>
                 <div class="skill-box web-dev">
                     <div class="skill-img"><img class="skill-img-direct" src="images/web-dev-skills/html.png">
@@ -142,7 +142,7 @@
             </div>
 
             <!--Pennetration testing experience-->
-            <div class="box penn-test" id="skills-col">
+            <div class="box penn-test reveal" id="skills-col">
                 <h1 id="skills-head">Pennetration Testing</h1>
                 <div class="skill-box penn-test">
                     <div class="skill-img"><img class="skill-img-direct" src="images/penn-test-skills/bash.png">
@@ -213,6 +213,27 @@
 
             });
         });
+
+        //Create code for revealing skill columns
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            //Select all that contains the reveal title in its class
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i< reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 120;
+                
+                //If we get to the reveal point we want set the class to active
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active')
+                } else {
+                    reveals[i].classList.remove('active')
+                }
+            }
+        }
     </script>
     </body>
 </html>

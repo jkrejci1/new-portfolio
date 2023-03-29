@@ -301,6 +301,21 @@ p {
         font-size: .85rem;
         padding-top: 1%;
     }
+
+    /*Reveal Scroll Animations*/
+
+    /*When we don't have an active reveal*/
+    .reveal {
+        position: relative;
+        transform: translateY(120px); /*We set revealpoint to 150*/
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    /*When we have an active reveal*/
+    .reveal.active {
+        transform: translateY(0px); /*We set revealpoint to 150*/
+        opacity: 1;
+    }
 }
 
 /*When media screen is at least 850 px*/

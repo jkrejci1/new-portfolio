@@ -181,7 +181,7 @@ p {
     .swiper-slide img{
         width: 100%;
         /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/
-        aspect-ratio: 3/2;
+        aspect-ratio: 4/2;
     }
 
     /*The flexbox layout*/

@@ -299,14 +299,9 @@ p {
 /*Use ease out to fade back to original when done hovering*/
 .navbar-links li a {
   display: block;
-  color: white;
   padding: 1rem;
   text-decoration: none;
-  transition: ease-out 0.62s;
   padding: 1rem 1rem;
-
-  /*IF WE CHANGE THE NAVBAR TITLE WE MAY NEED TO ADJUST THIS (IF WRAPPING WHERE NAVBAR LEAVES SPACE BETWEEN LINKS)*/
-
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/

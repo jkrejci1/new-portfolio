@@ -143,7 +143,7 @@ p {
     align-items: center;
     align-content: center;
     justify-items: center;
-    padding: 1rem;
+    padding: 0rem;
   }
 
 /*Direct sizing for the images*/
@@ -169,13 +169,55 @@ p {
 
 /*When media screen is at least 700 px*/
 @media screen and (min-width: 700px) {
+    /*Slider CSS COVER SCREEEN AND MAKE A LITTLE SHORTER*/
+    .swiper {
+        /*Width of what the swiper covers*/
+        width: 100%;
+        margin-top: 0rem;
+        /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
+        max-height: 600px;
+    }
+
+    .swiper-slide img{
+        width: 100%;
+        /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/
+        aspect-ratio: 3/2;
+    }
+
+    /*The flexbox layout*/
+    .container {
+        display: flex;
+        flex-direction: column; /*First have flex-direction be column for mobile devices*/
+        /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
+        margin-top: -.25rem;
+        margin-bottom: 0rem;
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        align-items: center; /*Align box to the center*/
+    }
     /*Shift picutre to the left of the box and have paragraph be to the right of it*/
+
+    /*The page should be a flex row now with the three columns wrapped under the intro*/
+    /*The flexbox layout (MIGHT NEED TO CHANGE THIS TO A GRID IN ORDER TO DO WHAT I WANT TO DO)*/
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+                "intro intro intro"
+                "web-dev programming penn-test";
+        grid-auto-rows: auto;
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;
+        margin-bottom: 50px;
+
+    }
+
     /*The first flexbox containing the intro*/
     #intro-box {
         display: flex;
         flex-direction: row;
     }
-    /*Picture of me in the wlecome message*/
+
+    /*Picture of me in the welcome message*/
     .jack-profile {
         max-width: 340px;
         padding-top: 10px;
@@ -192,4 +234,177 @@ p {
         margin-right: 30px;
         padding-top: 10px;
     }
+
+    /*Take all the boxes labeled as is and give them a grid-area for each*/
+    .box.intro {
+        grid-area: intro;
+        left: 20%;
+        width: 80%; /*Made intro box a little smaller*/
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    /*Skills columns*/
+    #skills-col {
+        height: 100%;
+        /*Overflow and min-width part makes columns not overflow off the grid when screen gets smaller*/
+        overflow: hidden;
+        min-width: 0;
+
+    }
+    #skills-head {
+        min-height: 77px;
+    }
+    .box.programming {
+        grid-area: programming;
+        width: 95%;
+    }
+    .box.web-dev {
+        grid-area: web-dev;
+        grid-template-columns: auto;
+        
+    }
+    .box.penn-test {
+        grid-area: penn-test;
+    }
+    
+    /*Skill box CSS*/
+    .skill-box.web-dev {
+        grid-template-columns: auto auto auto;
+        padding: 0rem;
+      }
+
+    .skill-box.penn-test {
+        grid-template-columns: auto auto auto;
+        padding: 0rem;
+    }
+    .skill-box.web-dev {
+        grid-template-columns: auto auto auto;
+        padding: 0rem;
+      }
+
+    /*Direct sizing for the images*/
+    .skill-img {
+        height: 110px;
+        width: 60px;
+    }
+    .skill-img-direct {
+        width: 55px;
+        height: 65px;
+    }
+    /*Needed to adjust the PHP logo to make it look better*/
+    .skill-img-direct-php {
+        max-width: 70px;
+        min-height: 65px;
+    }
+    .skill-description {
+        color: black;
+        font-size: .85rem;
+        padding-top: 1%;
+    }
+}
+
+/*When media screen is at least 850 px*/
+@media screen and (min-width: 850px) {
+    /*Shift picutre to the left of the box and have paragraph be to the right of it*/
+
+    /*The page should be a flex row now with the three columns wrapped under the intro*/
+    /*The flexbox layout (MIGHT NEED TO CHANGE THIS TO A GRID IN ORDER TO DO WHAT I WANT TO DO)*/
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+                "intro intro intro"
+                "web-dev programming penn-test";
+        grid-auto-rows: auto;
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;
+
+    }
+
+    /*The first flexbox containing the intro*/
+    #intro-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /*Picture of me in the welcome message*/
+    .jack-profile {
+        max-width: 340px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 50%;
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+    .box-paragraph {
+        width: 55%;
+        margin-bottom: 10px;
+        font-size: 1.15rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 10px;
+    }
+
+    /*Take all the boxes labeled as is and give them a grid-area for each*/
+    .box.intro {
+        grid-area: intro;
+        left: 20%;
+        width: 80%; /*Made intro box a little smaller*/
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    /*Skills columns*/
+    #skills-col {
+        height: 100%;
+        /*Overflow and min-width part makes columns not overflow off the grid when screen gets smaller*/
+        overflow: hidden;
+        min-width: 0;
+    }
+    #skills-head {
+        min-height: 77px;
+    }
+    .box.programming {
+        grid-area: programming;
+        width: 95%;
+    }
+    .box.web-dev {
+        grid-area: web-dev;
+        grid-template-columns: auto;
+        
+    }
+    .box.penn-test {
+        grid-area: penn-test;
+    }
+    
+    /*Skill box CSS*/
+    .skill-box.web-dev {
+        grid-template-columns: auto auto auto;
+        padding: 0rem;
+      }
+
+    .skill-box.penn-test {
+        grid-template-columns: auto auto auto;
+        padding: 0rem;
+    }
+
+    /*Direct sizing for the images*/
+    .skill-img {
+        height: 140px;
+        width: 80px;
+    }
+    .skill-img-direct {
+        width: 70px;
+        height: 80px;
+    }
+    /*Needed to adjust the PHP logo to make it look better*/
+    .skill-img-direct-php {
+        max-width: 75px;
+        min-height: 80px;
+    }
+    .skill-description {
+        color: black;
+        font-size: 1rem;
+        padding-top: 1%;
+    }
+    
 }

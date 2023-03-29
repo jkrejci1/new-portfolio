@@ -301,13 +301,15 @@ p {
   display: block;
   padding: 1rem;
   text-decoration: none;
+  color: white;
+  transition: ease-in 0.35s; /*Needs to be same as animation duration or makes a double hover effect*/
   padding: 1rem 1rem;
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/
 .navbar-links li a:hover:not(.active) {
   animation-name: colorTrans;
-  animation-duration: .3s;
+  animation-duration: .35s;
   background-color: white;
   color: black;
 }

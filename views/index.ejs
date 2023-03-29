@@ -229,9 +229,7 @@
                 //If we get to the reveal point we want set the class to active
                 if(revealtop < windowheight - revealpoint) {
                     reveals[i].classList.add('active')
-                } else {
-                    reveals[i].classList.remove('active')
-                }
+                } //Add an else statement to remove the active if you want this animation to happen on every downwards scroll if not it will animate once per refreshed page
             }
         }
     </script>

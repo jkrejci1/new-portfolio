@@ -95,6 +95,9 @@ p {
     padding-bottom: 10px;
     border-radius: 15%;
 }
+.img.hand-shake {
+    width: 100%;
+}
 
 /*For the paragraphs in the columns*/
 .box.paragraph {

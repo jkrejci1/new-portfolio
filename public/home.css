@@ -166,6 +166,15 @@ p {
     padding-top: 1%;
 }
 
+/*Change font sizes for paragraphs when the width hits 450px*/
+@media screen and (min-width: 450px) {
+    .box-paragraph {
+        width: 95%;
+        align-self: center;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+}
 
 /*When media screen is at least 700 px*/
 @media screen and (min-width: 700px) {

@@ -88,7 +88,9 @@ p {
 
 /*For the images inside the site*/
 .img {
-    width: 50%;
+    width: 80%;
+    height: 50%;
+    min-height: 173px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 15%;
@@ -99,6 +101,23 @@ p {
     width: 95%;
     align-self: center;
     margin-bottom: 10px;
-    font-size: 1.12rem;
+    font-size: .95rem;
     text-align: center;
+}
+.box-paragraph {
+    width: 95%;
+    align-self: center;
+    margin-bottom: 10px;
+    font-size: .95rem;
+    text-align: center;
+}
+
+/*For the text in the work section*/
+.box-paragraph.work {
+    width: 70%;
+    align-self: center;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 20px;
 }

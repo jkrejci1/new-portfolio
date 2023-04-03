@@ -69,6 +69,17 @@ p {
     align-items: center; /*Align box to the center*/
     font-family: Arial, Helvetica, sans-serif;
 }
+/*Use wrappers behind the boxes that have different layout settings for each one*/
+.wrapper {
+    display: flex;
+    flex-direction: column; /*First have flex-direction be column for mobile devices*/
+    /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
+    margin-bottom: 0rem;
+    min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+    align-items: center; /*Align box to the center*/
+    font-family: Arial, Helvetica, sans-serif; 
+    width: 95%;
+}
 
 /*Boxes for welcome message and the expereince icons*/
 .box {
@@ -127,10 +138,22 @@ img.st-francis {
     margin-bottom: 10px;
     font-size: 1rem;
     text-align: left;
-    margin-left: 20px;
     font-weight: 385;
 }
 
+/*No text decoration for the list*/
+ul {
+    text-align: left;
+    margin-left: 20px;
+}
+
+/*Change font sizes for headers when width is under 330*/
+@media screen and (max-width: 330px) {
+    /*For the paragraphs in the columns*/
+    .outside-header {
+        font-size: 2.835rem;
+    }
+}
 /*Change font sizes for paragraphs when the width hits 450px*/
 @media screen and (min-width: 450px) {
     /*For the paragraphs in the columns*/
@@ -145,3 +168,147 @@ img.st-francis {
         font-size: 1.3rem;
     }
 }
+
+/*When we hit much larger screens change the structure of the website*/
+@media screen and (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                "about about about about"
+                "work work work work"
+                "past-work past-work past-work past-work"
+                "hobbies hobbies hobbies hobbies"
+                "hob hob hob hob"
+                "volunteer volunteer volunteer volunteer"
+                "vol vol vol vol";
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;
+    }
+
+    /*Use wrappers behind the boxes that have different layout settings for each one*/
+    .wrapper.about {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "about-me about-me about-me about-me"
+                "hire-me hire-me hire-me hire-me";
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;  
+        background-color: black;
+        grid-area: about;
+        width: 80%;
+    }
+    .wrapper.work {
+        display: grid;
+        grid-area: past-work;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "fritzls-work gfs-work scoreboard-work hawthorn-work";
+        min-height: 50vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;  
+        background-color: black;
+        font-size: 0.7rem;
+
+    }
+    .wrapper.hobbies {
+        display: grid;
+        grid-area: hob;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "hockey hockey fishing fishing";
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;  
+        background-color: black;
+    }
+    .wrapper.volunteer {
+        display: grid;
+        grid-area: vol;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "pantry pantry pantry pantry";
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;  
+        background-color: black;
+    }
+
+    /*For all boxes*/
+    .box {
+        top: 0;
+        height: 100%;
+    }
+
+    /*Boxes for the headers for work*/
+    .workbox {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        vertical-align: middle;
+        width: 100%;
+        padding-top: 0px;
+        height: 80px;
+    }
+
+    /*Headers for the work box*/
+    .work-header {
+        vertical-align: middle;
+        margin-top: 10%;
+    }
+    /*Need to adjust box paragraph boxes to all stay same size*/
+    .box-paragraph.work {
+        display: block;
+        height: 100px;
+        width: 90%;
+        font-size: .9rem;
+    }
+
+    /*Give the correct boxes its corresponding area*/
+    .box.about-me {
+        grid-area: about-me;
+    }
+    .box.hire-me {
+        grid-area: hire-me;
+    }
+    .box.fritzls-work {
+        grid-area: fritzls-work;
+    }
+    .box.gfs-work {
+        grid-area: gfs-work;
+    }
+    .box.scoreboard-work {
+        grid-area: scoreboard-work;
+    }
+    .box.hawthorn-work {
+        grid-area: hawthorn-work;
+    }
+    .box.hockey {
+        grid-area: hockey;
+    }
+    .box.fishing {
+        grid-area: fishing;
+    }
+    .box.pantry {
+        grid-area: pantry;
+    }
+    /*Needed to also add areas for the outside header labels*/
+    .outside-header.past-work {
+        grid-area: work;
+    }
+    .outside-header.hobbies {
+        grid-area: hobbies;
+    }
+    .outside-header.volunteer {
+        grid-area: volunteer;
+    }
+
+    /*Keeping images proper heights CHECK LATER*/
+    .img.fritz, .img.gfs, .img.scoreboard, .img.hawthorn {
+        width: 87.5%;
+    }
+    /*Make images with text for about and hire me flex side by side like home text*/
+}
+

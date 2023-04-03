@@ -258,7 +258,6 @@ p {
     .box.web-dev {
         grid-area: web-dev;
         grid-template-columns: auto;
-        
     }
     .box.penn-test {
         grid-area: penn-test;

@@ -205,7 +205,6 @@ p {
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;
         margin-bottom: 50px;
-
     }
 
     /*The first flexbox containing the intro*/

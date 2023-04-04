@@ -185,6 +185,7 @@ ul {
                 "vol vol vol vol";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;
+        margin-bottom: 50px;
     }
 
     /*Use wrappers behind the boxes that have different layout settings for each one CHANGE BGROUND COLOR TO SEE THEM VISUALLY*/
@@ -235,7 +236,7 @@ ul {
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
         /*background-color: black;*/
-        width: 60%;
+        width: 70%;
     }
 
     /*For all boxes*/
@@ -314,6 +315,7 @@ ul {
     }
     .box.pantry {
         grid-area: pantry;
+        height: auto;
     }
     /*Needed to also add areas for the outside header labels*/
     .outside-header.past-work {
@@ -352,7 +354,7 @@ ul {
     /*NOW TIME FOR THE VOLUNTEER SECTION*/
     /*Adjust the image so it's not so crazy big*/
     .img.st-francis {
-        width: 70%;
+        width: 100%;
     }
 
     /*Adjust images for the about me beginning section*/
@@ -369,6 +371,21 @@ ul {
         width: 55%;
     }
 
+    /*Need to fix strucutre of pantry*/
+    .box.pantry {
+        display: flex;
+        flex-direction: column;
+    }
+    .pantry-header {
+        /*background-color: red;*/
+        width: 100%;
+        top: 0px;
+    }
+    .pantry-pic {
+        min-height: 100px;
+        /*background-color: aqua;*/
+        width: 70%
+    }
     /*When we don't have an active reveal*/
     .reveal {
         position: relative;

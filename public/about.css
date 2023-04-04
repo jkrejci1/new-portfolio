@@ -1,3 +1,4 @@
+/*MIGHT NEED TO EDIT HOBBIES SECTION FOR SCREENS THAT ARE BIG BUT NOT SO BIG YET!!!!*/
 * {
     margin: 0;
     padding: 0;
@@ -186,7 +187,7 @@ ul {
         justify-items: center;
     }
 
-    /*Use wrappers behind the boxes that have different layout settings for each one*/
+    /*Use wrappers behind the boxes that have different layout settings for each one CHANGE BGROUND COLOR TO SEE THEM VISUALLY*/
     .wrapper.about {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -196,7 +197,7 @@ ul {
                 "hire-me hire-me hire-me hire-me";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
-        background-color: black;
+        /*background-color: black;*/
         grid-area: about;
         width: 80%;
     }
@@ -209,7 +210,7 @@ ul {
                 "fritzls-work gfs-work scoreboard-work hawthorn-work";
         min-height: 50vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
-        background-color: black;
+        /*background-color: black; FOR REFERENCE*/
         font-size: 0.7rem;
 
     }
@@ -222,7 +223,7 @@ ul {
                 "hockey hockey fishing fishing";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
-        background-color: black;
+        width: 100%;
     }
     .wrapper.volunteer {
         display: grid;
@@ -233,13 +234,16 @@ ul {
                 "pantry pantry pantry pantry";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
-        background-color: black;
+        /*background-color: black;*/
+        width: 60%;
     }
 
     /*For all boxes*/
     .box {
         top: 0;
         height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
     /*Boxes for the headers for work*/
@@ -256,7 +260,20 @@ ul {
     /*Headers for the work box*/
     .work-header {
         vertical-align: middle;
-        margin-top: 10%;
+        margin-top: 0;
+    }
+    /*Paragraph boxes for about section*/
+    .box.paragraph {
+        /*background-color: red;*/
+        justify-content: start;
+        height: auto;
+    }
+    #journey-box {
+        margin-bottom: 90px;
+        height: auto;
+    }
+    .box.hire-me {
+        height: auto;
     }
     /*Need to adjust box paragraph boxes to all stay same size*/
     .box-paragraph.work {
@@ -287,9 +304,13 @@ ul {
     }
     .box.hockey {
         grid-area: hockey;
+        display: flex;
+        flex-direction: column;
     }
     .box.fishing {
         grid-area: fishing;
+        display: flex;
+        flex-direction: column;
     }
     .box.pantry {
         grid-area: pantry;
@@ -309,6 +330,57 @@ ul {
     .img.fritz, .img.gfs, .img.scoreboard, .img.hawthorn {
         width: 87.5%;
     }
-    /*Make images with text for about and hire me flex side by side like home text*/
+
+
+    /*USED FLEX FOR THE WHITE COLUMNS FOR HERE TO MAKE PROPER ADJUSTMENTS FOR REPSONSSIVENESS*/
+    /*Paragraph boxes for the hobbie section*/
+    .box-paragraph.hobbies {
+        width: 95%;
+        /*background-color: red;*/
+        height: 90%;
+    }
+
+    /*Get images same using boxes for hobbies*/
+    .box-pictures.hobbies {
+       /* background-color: aqua;*/
+        width: 100%;
+    }
+    .img.hock, .img.fish {
+        height: 100%;
+    }
+
+    /*NOW TIME FOR THE VOLUNTEER SECTION*/
+    /*Adjust the image so it's not so crazy big*/
+    .img.st-francis {
+        width: 70%;
+    }
+
+    /*Adjust images for the about me beginning section*/
+    .img.hand-shake {
+        width: 100%;
+        height: 100%;
+    }
+    .shake-box {
+        /*background-color: aqua;*/
+        width: 100%;
+        height: 450px;
+    }
+    .img.beginning {
+        width: 55%;
+    }
+
+    /*When we don't have an active reveal*/
+    .reveal {
+        position: relative;
+        transform: translateY(120px); /*We set revealpoint to 150*/
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    /*When we have an active reveal*/
+    .reveal.active {
+        transform: translateY(0px); /*We set revealpoint to 150*/
+        opacity: 1;
+    }
+    
 }
 

@@ -22,11 +22,11 @@
         <div class="container">
             <div class="wrapper about">
                 <!--Insert two divs for the more about me and why hire me-->
-                <div class="box about-me">
+                <div class="box about-me" id="journey-box">
                     <h1>The Beginning of My Journey</h1>
                     <img class="img beginning" src="images/who-am-i/started.png">
                     <div class="box paragraph">
-                        <p>My journey in computer science all started when I was a sophomore in high school where we were 
+                        <p class="about-text">My journey in computer science all started when I was a sophomore in high school where we were 
                             required to pick some electives to take, and one of the classes caught my eye. The class was an 
                             introductory course in web design. We started out using Wix to make websites, and then towards the 
                             end of the course we dipped our toes in some HTML and CSS. Then in my junior year my math teacher 
@@ -42,11 +42,13 @@
                 </div>  
 
                 <!--Insert information in why you should hire me-->
-                <div class="box hire-me">
+                <div class="box hire-me reveal">
                     <h1>Why You Should Hire Me</h1>
-                    <img class="img hand-shake" src="images/who-am-i/shake.png">
+                    <div class="shake-box">
+                        <img class="img hand-shake" src="images/who-am-i/shake.png">
+                    </div>
                     <div class="box paragraph">
-                        <p>If you want someone that is passionate about their job, and cares greatly about their craft, I’m 
+                        <p class="about-text">If you want someone that is passionate about their job, and cares greatly about their craft, I’m 
                             the guy for you. I’ve always had an extremely deep drive inside of me that pushes me to keep 
                             going and to always strive for what I want to do in life. That deep drive has helped me so much 
                             when having to perform hard tasks or figure out problems that seem impossible at the start. I 
@@ -66,7 +68,7 @@
 
             <!--Past Work Section-->
             <h1 class="outside-header past-work">Past Work</h1>
-            <div class="wrapper work">
+            <div class="wrapper work reveal">
                 <!--Working at fritzls-->
                 <div class="box fritzls-work">
                     <div class="workbox">
@@ -131,11 +133,13 @@
 
             <!--Hobbies-->
             <h1 class="outside-header hobbies">Hobbies</h1>
-            <div class="wrapper hobbies">
+            <div class="wrapper hobbies reveal">
                 <!--Hockey section-->
                 <div class="box hockey">
                     <h1>Hockey</h1>
-                    <img class="img hock" src="images/hobbies/hockey.jpg">
+                    <div class="box-pictures hobbies">
+                        <img class="img hock" src="images/hobbies/hockey.jpg">
+                    </div>
                     <div class="box-paragraph hobbies">
                         <p>I started playing hockey when I was little with friends and always enjoyed playing goalie. 
                             People usually think that’s weird, but there’s something about making that crazy save and 
@@ -158,7 +162,9 @@
                 <!--Fishing section-->
                 <div class="box fishing">
                     <h1>Fishing</h1>
-                    <img class="img fish" src="images/hobbies/fishing.jpg">
+                    <div class="box-pictures hobbies">
+                        <img class="img hock" src="images/hobbies/fishing.jpg">
+                    </div>
                     <div class="box-paragraph hobbies">
                         <p>Fishing has always been my biggest hobby since I could walk, it’s something that I find so 
                             relaxing yet exciting at the same time. I’ve always enjoyed bass fishing and would occasionally 
@@ -180,7 +186,7 @@
 
             <!--Volunteering-->
             <h1 class="outside-header volunteer">Volunteering</h1>
-            <div class="wrapper volunteer">
+            <div class="wrapper volunteer reveal">
                 <div class="box pantry">
                     <h1>St. Vincent de Paul Food Pantry</h1>
                     <img class="img st-francis" src="images/work-photos/st-francis.jpg">
@@ -205,5 +211,26 @@
         <!--Insert the footer using ejs-->
         <%- include('partials/footer'); -%>
 
+        <!--JavaScript-->
+        <script>
+            //Create code for revealing skill columns
+            window.addEventListener('scroll', reveal);
+
+            function reveal() {
+                //Select all that contains the reveal title in its class
+                var reveals = document.querySelectorAll('.reveal');
+
+                for(var i = 0; i< reveals.length; i++) {
+                    var windowheight = window.innerHeight;
+                    var revealtop = reveals[i].getBoundingClientRect().top;
+                    var revealpoint = 120;
+                    
+                    //If we get to the reveal point we want set the class to active
+                    if(revealtop < windowheight - revealpoint) {
+                        reveals[i].classList.add('active')
+                    } //Add an else statement to remove the active if you want this animation to happen on every downwards scroll if not it will animate once per refreshed page
+                }
+            }
+        </script>
     </body>
 </html>

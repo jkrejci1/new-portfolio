@@ -10,28 +10,29 @@
 :root {
     --gradient: linear-gradient(
         50deg,
-        rgb(134, 134, 248),
-        #c471ed,
-        rgb(235, 103, 235),
-        #f64f59,
-        rgb(255, 83, 83)
+        #173197,
+        #1a2a6c, 
+        #9c1e1e,
+        #b81f1f,
+        #d69e25,
+        #fdbb2d
         
     );
 }
 
-body, main {
-    background-image: var(--gradient);
-    /*background-size: cover;*/
+
+body {
     position: relative;
+    background-image: var(--gradient);
     /*Creating bottom padding so there's no overlap with the footer with body content*/
-    padding-bottom: 100px; /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
+    /*padding-bottom: 100px;*/ /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
     /*Need to set proper min height to where the footer is always at bottom*/
-    min-height: 80vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
+    min-height: 100vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
     margin: 0px;
     padding: 0px;
     background-size: 400%;
-    animation: bg-animation 300s infinite alternate;
-
+    animation: bg-animation 200s infinite alternate;
+    /*Set default font size for rems*/
 }
 
 /*Background animation*/
@@ -40,12 +41,44 @@ body, main {
     100% {background-position: right;}
 }
 
-/*Main Body CSS*/
-p {
-    color: white;
+/*Container for our flex items*/
+.container {
+    display: flex;
+    flex-direction: column; /*First have flex-direction be column for mobile devices*/
+    /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
+    margin-bottom: 0rem;
+    min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+    align-items: center; /*Align box to the center*/
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/*When media screen is at least 500 px*/
-@media screen and (min-width: 500px) {
+/*Paragraph CSS*/
+p {
+    position: relative;
+    color: black;
+    font-weight: 385;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
+/*CSS for the outside headers*/
+.outside-header {
+    color: white;
+    -webkit-text-stroke: 1.5px black; /* width and color */
+    font-size: 3.3rem;
+}
+
+/*CSS for the boxes containing info, they'll be flex-boxes*/
+.box {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    width: 95%;
+    text-align: center;
+    height: auto;
+    overflow: wrap;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }

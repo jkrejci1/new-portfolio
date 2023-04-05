@@ -103,6 +103,7 @@ p {
     list-style-position: inside;
     position: relative;
     left: 1%;
+    list-style: none;
 }
 .school-list li span {
     position: relative;
@@ -113,7 +114,7 @@ p {
     align-self: center;
     text-align: left;
     font-weight: 385;
-    font-size: 6.5vw;
+    font-size: 4.8vw;
 }
 
 /*CSS for the awards boxes*/
@@ -143,10 +144,10 @@ p {
 .award-list {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    width: 100%;
     list-style-position: outside;
     position: relative;
-    left: 5%;
+    list-style: none;
 }
 .school-list li span {
     position: auto;

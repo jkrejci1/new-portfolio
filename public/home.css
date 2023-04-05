@@ -46,7 +46,9 @@ p {
     position: relative;
     color: white;
 }
-
+h1 {
+    font-size: 7vw;
+}
 /*Slider CSS*/
 .swiper {
     /*Width of what the swiper covers*/
@@ -191,6 +193,9 @@ p {
         width: 100%;
         /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/
         aspect-ratio: 4/2;
+    }
+    h1 {
+        font-size: 3vw;
     }
 
     /*The page should be a flex row now with the three columns wrapped under the intro*/

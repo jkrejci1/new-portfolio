@@ -71,6 +71,7 @@ h1 {
     min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
     align-items: center; /*Align box to the center*/
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 /*Use wrappers behind the boxes that have different layout settings for each one*/
 .wrapper {
@@ -81,7 +82,7 @@ h1 {
     min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
     align-items: center; /*Align box to the center*/
     font-family: Arial, Helvetica, sans-serif; 
-    width: 95%;
+    width: 100%;
 }
 
 /*Boxes for welcome message and the expereince icons*/

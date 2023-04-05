@@ -53,9 +53,11 @@ p {
     color: white;
     -webkit-text-stroke: 1.5px black; /* width and color */
     padding-top: 30px;
-    font-size: 3.3rem;
+    font-size: 10vw;
 }
-
+h1 {
+    font-size: 7vw;
+}
 .outside-header.work {
     padding-top: 0px;
 }
@@ -107,6 +109,9 @@ p {
     padding-bottom: 10px;
     border-radius: 15%;
 }
+.shake-box {
+    width: 100%;
+}
 .img.hand-shake {
     width: 100%;
 }
@@ -137,7 +142,7 @@ img.st-francis {
     width: 70%;
     align-self: center;
     margin-bottom: 10px;
-    font-size: 1rem;
+    font-size: 4.3vw;
     text-align: left;
     font-weight: 385;
 }
@@ -148,13 +153,6 @@ ul {
     margin-left: 20px;
 }
 
-/*Change font sizes for headers when width is under 330*/
-@media screen and (max-width: 330px) {
-    /*For the paragraphs in the columns*/
-    .outside-header {
-        font-size: 2.835rem;
-    }
-}
 /*Change font sizes for paragraphs when the width hits 450px*/
 @media screen and (min-width: 450px) {
     /*For the paragraphs in the columns*/
@@ -166,7 +164,7 @@ ul {
     }
     /*For the text in the work section*/
     .box-paragraph.work {
-        font-size: 1.3rem;
+        font-size: 4.3vw;
     }
 }
 
@@ -187,7 +185,15 @@ ul {
         justify-items: center;
         margin-bottom: 50px;
     }
-
+    h1 {
+        font-size: 3vw;
+    }
+    .outside-header {
+        font-size: 5.5vw;
+    }
+    .work-header {
+        font-size: 1.8vw;
+    }
     /*Use wrappers behind the boxes that have different layout settings for each one CHANGE BGROUND COLOR TO SEE THEM VISUALLY*/
     .wrapper.about {
         display: grid;
@@ -281,7 +287,7 @@ ul {
         display: block;
         height: 100px;
         width: 90%;
-        font-size: .9rem;
+        font-size: 1.5vw;
     }
 
     /*Give the correct boxes its corresponding area*/

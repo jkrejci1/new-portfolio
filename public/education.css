@@ -50,6 +50,7 @@ body {
     min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
     align-items: center; /*Align box to the center*/
     font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
 }
 
 /*Paragraph CSS*/
@@ -81,6 +82,16 @@ p {
     align-items: center;
     display: flex;
     flex-direction: column;
+    align-self: center;
+}
+.wrapper.school {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;  
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 /*CSS for the Education Columns*/
@@ -152,4 +163,118 @@ p {
 .school-list li span {
     position: auto;
     left: 0px;
+}
+
+/*When we hit much larger screens change the structure of the website*/
+@media screen and (min-width: 700px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+                "school school school school"
+                "awards awards awards awards";
+        min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
+        justify-items: center;
+        margin-bottom: 50px;
+    }
+
+    h1 {
+        font-size: 3vw;
+    }
+    .outside-header {
+        font-size: 5.5vw;
+    }
+    .wrapper-header {
+        grid-area: head2;
+        width: 100%;
+    }
+
+    /*Use wrappers behind the boxes that have different layout settings for each one CHANGE BGROUND COLOR TO SEE THEM VISUALLY*/
+    .wrapper.school {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "lewis lewis clc clc";
+        grid-area: school;
+        width: 100%;
+        background-color: black;
+    }
+
+    /*For all boxes*/
+    .box {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        height: 100%;
+    }
+    .col-paragraph {
+        width: 100%;
+        align-self: center;
+        text-align: left;
+        font-weight: 385;
+        font-size: 2.2vw;
+    }
+
+    .box.lewis {
+        grid-area: lewis;
+        align-self: auto;
+    }
+    .box.clc {
+        grid-area: clc;
+        align-self: auto;
+    }
+    /*CSS For the resizing of the images in the columns*/
+    .col-pic {
+        width: 100%;
+    }
+    .col-head {
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        position: relative;
+
+    }
+    .img-clc, .img-lewis {
+        height: 100%;
+
+    }
+
+    /*CSS for the awards section*/
+    .box-awards {
+        display: flex;
+        grid-area: awards;
+        width: 99%;
+        flex-direction: row;
+    }
+    .col-head.awards {
+        grid-area: head;
+        background-color: aqua;
+    }
+    .awards-pics {
+        grid-area: pics;
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        align-self: auto;
+
+    }
+    .col-pic.award {
+        width: 100%;
+        background-color: none;
+        align-self: auto;
+        height: 30%;
+    }
+    .img-grad, .img-award {
+        width: 100%;
+        justify-self: center;
+    }
+    .col-paragraph.awards {
+        grid-area: txt;
+        font-size: 1.8rem;
+        background-color: yellow;
+        align-self: auto;
+        align-items: auto;
+    }
 }

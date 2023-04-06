@@ -232,6 +232,7 @@ ul {
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
         width: 100%;
+        background-color: black;
     }
     .wrapper.volunteer {
         display: grid;
@@ -244,6 +245,8 @@ ul {
         justify-items: center;  
         /*background-color: black;*/
         width: 70%;
+        background-color: black;
+
     }
 
     /*For all boxes*/
@@ -322,7 +325,8 @@ ul {
     }
     .box.pantry {
         grid-area: pantry;
-        height: auto;
+        display: flex;
+        flex-direction: column;
     }
     /*Needed to also add areas for the outside header labels*/
     .outside-header.past-work {
@@ -348,6 +352,11 @@ ul {
         /*background-color: red;*/
         height: 90%;
     }
+    .box-paragraph.volunteer {
+        width: 95%;
+        /*background-color: red;*/
+        height: 60%;
+    }
 
     /*Get images same using boxes for hobbies*/
     .box-pictures.hobbies {
@@ -361,7 +370,7 @@ ul {
     /*NOW TIME FOR THE VOLUNTEER SECTION*/
     /*Adjust the image so it's not so crazy big*/
     .img.st-francis {
-        width: 100%;
+        height: 100%;
     }
 
     /*Adjust images for the about me beginning section*/
@@ -378,20 +387,14 @@ ul {
         width: 55%;
     }
 
-    /*Need to fix strucutre of pantry*/
-    .box.pantry {
-        display: flex;
-        flex-direction: column;
-    }
+
     .pantry-header {
         /*background-color: red;*/
         width: 100%;
-        top: 0px;
     }
     .pantry-pic {
-        min-height: 100px;
         /*background-color: aqua;*/
-        width: 70%
+        width: 100%
     }
     /*When we don't have an active reveal*/
     .reveal {

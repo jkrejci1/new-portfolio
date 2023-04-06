@@ -21,6 +21,7 @@
 
         <div class="container">
             <!--Beginning header for schools attended-->
+            <h1 class="outside-header">Schooling</h1>
             <div class="wrapper school">
                 <!--First box that will have Lewis in it-->
                 <div class="box lewis">
@@ -62,8 +63,9 @@
                     </div>
                 </div>
             </div>
-
-            <div class="box-awards">
+            
+            <h1 class="outside-header">Awards</h1>
+            <div class="box-awards reveal">
                 <!--Make this display flex row to get pics side by side-->
                 <div class="awards-pics">
                     <img class="img-grad" src="images/education-photos/graduation.jpg">
@@ -88,4 +90,24 @@
         <%- include('partials/footer'); -%>
 
     </body>
+    <script>
+        //Create code for revealing skill columns
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            //Select all that contains the reveal title in its class
+            var reveals = document.querySelectorAll('.reveal');
+
+            for(var i = 0; i< reveals.length; i++) {
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 120;
+                
+                //If we get to the reveal point we want set the class to active
+                if(revealtop < windowheight - revealpoint) {
+                    reveals[i].classList.add('active')
+                } //Add an else statement to remove the active if you want this animation to happen on every downwards scroll if not it will animate once per refreshed page
+            }
+        }
+    </script>
 </html>

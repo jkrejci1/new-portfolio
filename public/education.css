@@ -28,8 +28,6 @@ body {
     /*padding-bottom: 100px;*/ /*Make sure this is equal to the height of the footer WILL CHANGE LATER*/
     /*Need to set proper min height to where the footer is always at bottom*/
     min-height: 100vh; /*WAS 100 BEFORE, IF PROBLEMS GO BACK TO 100*/
-    margin: 0px;
-    padding: 0px;
     background-size: 400%;
     animation: bg-animation 200s infinite alternate;
     /*Set default font size for rems*/
@@ -91,7 +89,7 @@ p {
     width: 100%;
     height: 100%;
     justify-content: center;
-    margin-bottom: 20px;
+    -bottom: 20px;
 }
 
 /*CSS for the Education Columns*/
@@ -159,6 +157,7 @@ p {
     list-style-position: outside;
     position: relative;
     list-style: none;
+    background-color: white;
 }
 .school-list li span {
     position: auto;
@@ -168,37 +167,32 @@ p {
 /*When we hit much larger screens change the structure of the website*/
 @media screen and (min-width: 700px) {
     .container {
-        display: grid;
+        display: flex;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-areas: 
                 "school school school school"
                 "awards awards awards awards";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;
-        margin-bottom: 50px;
     }
-
     h1 {
         font-size: 3vw;
     }
     .outside-header {
         font-size: 5.5vw;
-    }
-    .wrapper-header {
-        grid-area: head2;
-        width: 100%;
+        padding: 0px;
+        margin: 0px;
     }
 
     /*Use wrappers behind the boxes that have different layout settings for each one CHANGE BGROUND COLOR TO SEE THEM VISUALLY*/
     .wrapper.school {
         display: grid;
+        grid-area: school;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /*Template areas for the site*/
         grid-template-areas: 
                 "lewis lewis clc clc";
-        grid-area: school;
-        width: 100%;
-        background-color: black;
+        width: 90%;
     }
 
     /*For all boxes*/
@@ -213,7 +207,7 @@ p {
         align-self: center;
         text-align: left;
         font-weight: 385;
-        font-size: 2.2vw;
+        font-size: 1.50vw;
     }
 
     .box.lewis {
@@ -229,7 +223,6 @@ p {
         width: 100%;
     }
     .col-head {
-        background-color: red;
         height: 100%;
         width: 100%;
         text-align: center;
@@ -238,33 +231,29 @@ p {
     }
     .img-clc, .img-lewis {
         height: 100%;
-
     }
 
     /*CSS for the awards section*/
     .box-awards {
         display: flex;
         grid-area: awards;
-        width: 99%;
+        width: 75%;
         flex-direction: row;
-    }
-    .col-head.awards {
-        grid-area: head;
-        background-color: aqua;
+        background-color: white;
+        margin-bottom: 50px;
     }
     .awards-pics {
         grid-area: pics;
         display: flex;
         flex-direction: column;
-        width: 20%;
+        width: 45%;
         align-self: auto;
-
     }
     .col-pic.award {
         width: 100%;
         background-color: none;
         align-self: auto;
-        height: 30%;
+        height: 40%;
     }
     .img-grad, .img-award {
         width: 100%;
@@ -272,9 +261,21 @@ p {
     }
     .col-paragraph.awards {
         grid-area: txt;
-        font-size: 1.8rem;
-        background-color: yellow;
+        font-size: 2.0vw;
         align-self: auto;
         align-items: auto;
+    }
+
+    .reveal {
+        /*CHANGE POSITION BACK TO RELATIVE IF THERE'S ANY PROBLEMS*/
+        transform: translateX(-1300px); /*We set revealpoint to 150*/
+        opacity: 0;
+        transition: all 1s ease;
+    }
+
+    /*When we have an active reveal*/
+    .reveal.active {
+        transform: translateY(0px); /*We set revealpoint to 150*/
+        opacity: 1;
     }
 }

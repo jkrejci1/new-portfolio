@@ -232,7 +232,6 @@ ul {
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
         width: 100%;
-        background-color: black;
     }
     .wrapper.volunteer {
         display: grid;
@@ -245,7 +244,6 @@ ul {
         justify-items: center;  
         /*background-color: black;*/
         width: 70%;
-        background-color: black;
 
     }
 

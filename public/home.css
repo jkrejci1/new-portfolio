@@ -268,7 +268,7 @@ h1 {
     }
     
     /*Skill box CSS*/
-    .skill-box.web-dev {
+    .skill-box.programming {
         grid-template-columns: auto auto auto;
         padding: 0rem;
       }

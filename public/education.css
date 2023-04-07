@@ -176,10 +176,10 @@ p {
         justify-items: center;
     }
     h1 {
-        font-size: 3vw;
+        font-size: 3.6vw;
     }
     .outside-header {
-        font-size: 5.5vw;
+        font-size: 6vw;
         padding: 0px;
         margin: 0px;
     }
@@ -207,7 +207,7 @@ p {
         align-self: center;
         text-align: left;
         font-weight: 385;
-        font-size: 1.50vw;
+        font-size: 2.8vw;
     }
 
     .box.lewis {
@@ -237,7 +237,7 @@ p {
     .box-awards {
         display: flex;
         grid-area: awards;
-        width: 75%;
+        width: 95%;
         flex-direction: row;
         background-color: white;
         margin-bottom: 50px;
@@ -246,7 +246,7 @@ p {
         grid-area: pics;
         display: flex;
         flex-direction: column;
-        width: 45%;
+        width: 50%;
         align-self: auto;
     }
     .col-pic.award {
@@ -261,7 +261,7 @@ p {
     }
     .col-paragraph.awards {
         grid-area: txt;
-        font-size: 2.0vw;
+        font-size: 2.8vw;
         align-self: auto;
         align-items: auto;
     }
@@ -277,5 +277,29 @@ p {
     .reveal.active {
         transform: translateY(0px); /*We set revealpoint to 150*/
         opacity: 1;
+    }
+}
+
+/*When we hit much larger screens change the structure of the website*/
+@media screen and (min-width: 850px) {
+    .col-paragraph {
+        font-size: 1.50vw;
+    }
+    .col-paragraph.awards {
+        font-size: 2.0vw;
+    }
+    .box-awards {
+        display: flex;
+        grid-area: awards;
+        width: 75%;
+        flex-direction: row;
+        background-color: white;
+        margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 3vw;
+    }
+    .outside-header {
+        font-size: 5.5vw;
     }
 }

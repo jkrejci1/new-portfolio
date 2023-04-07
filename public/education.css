@@ -192,7 +192,7 @@ p {
         /*Template areas for the site*/
         grid-template-areas: 
                 "lewis lewis clc clc";
-        width: 90%;
+        width: 95%;
     }
 
     /*For all boxes*/
@@ -237,7 +237,7 @@ p {
     .box-awards {
         display: flex;
         grid-area: awards;
-        width: 95%;
+        width: 90%;
         flex-direction: row;
         background-color: white;
         margin-bottom: 50px;
@@ -301,5 +301,14 @@ p {
     }
     .outside-header {
         font-size: 5.5vw;
+    }
+    .wrapper.school {
+        display: grid;
+        grid-area: school;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /*Template areas for the site*/
+        grid-template-areas: 
+                "lewis lewis clc clc";
+        width: 90%;
     }
 }

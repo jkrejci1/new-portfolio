@@ -94,7 +94,7 @@ p {
     background-color: white;
     width: 300px;
     /*MIGHT NEED TO PLAY WITH HEIGHT IF WE WANT ALL SAME*/
-    height: 450px;
+    height: 410px;
     margin: 10px;
     border-radius: 15px;
     transition: ease-in 0.35s;

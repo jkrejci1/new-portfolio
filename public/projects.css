@@ -62,14 +62,13 @@ p {
     bottom: 0px;
     text-decoration: none;
 }
-.srcCode.alone {
-    margin-top: 50px;
-}
-
 .srcCode:hover {
     animation-name: colorTrans;
-    background-color: white;
-    color: black;
+    background-color: #9c1e1e;
+    color: white;
+}
+.srcCode.alone {
+    margin-top: 50px;
 }
 
 /*Hover animation functions*/
@@ -101,7 +100,6 @@ p {
     height: 480px;
     margin: 10px;
     border-radius: 15px;
-    transition: ease-in 0.35s;
 }
 .card.url {
     height: 480px;
@@ -118,15 +116,32 @@ h2 {
     padding-bottom: 5px;
 }
 
-/*Create hover effect*/
-.card:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-    transform: scale(1.075);
-    transition: all .35s ease;
-}
+/*Only turn on card animations above 650px width*/
+@media screen and (min-width: 650px) {
 
+    .card {
+        background-color: white;
+        width: 300px;
+        /*MIGHT NEED TO PLAY WITH HEIGHT IF WE WANT ALL SAME*/
+        height: 480px;
+        margin: 10px;
+        border-radius: 15px;
+        transition: ease-in 0.35s;
+    }
+    /*Create hover effect*/
+    .card:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.07);
+        transition: all .35s ease;
+    }
+    .srcCode:hover {
+        animation-name: colorTrans;
+        background-color: white;
+        color: black;
+    }
+}
 /*The individual images*/
 .car-1 {
     background-image: url("images/projects/capstone.png"); 

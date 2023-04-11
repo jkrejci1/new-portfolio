@@ -166,6 +166,8 @@ p {
   position: absolute;
   font-size: 25px;
   margin-left: 2px;
+  padding: 0px 0px 0px 0px;
+
 }
 
 .phoneText {
@@ -174,6 +176,8 @@ p {
   top: 50%;
   font-size: 16.4px;
   margin-left: 24px;
+  padding: 0px 0px 0px 0px;
+
 }
 
 .emailText {
@@ -181,6 +185,8 @@ p {
   top: 28%;
   font-size: 16.4px;
   margin-left: .8px;
+  padding: 0px 0px 0px 0px;
+
 }
 
 .grid-footer {

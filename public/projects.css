@@ -141,6 +141,18 @@ h2 {
         background-color: white;
         color: black;
     }
+    /*When we don't have an active reveal*/
+    .reveal {
+        /*CHANGE POSITION BACK TO RELATIVE IF THERE'S ANY PROBLEMS*/
+        transform: translateY(120px); /*We set revealpoint to 150*/
+        opacity: 0;
+        transition: all 1s ease;
+    }
+    /*When we have an active reveal*/
+    .reveal.active {
+        transform: translateY(0px); /*We set revealpoint to 150*/
+        opacity: 1;
+    }
 }
 /*The individual images*/
 .car-1 {

@@ -119,11 +119,12 @@ p {
     left: -15px;
 }
 .col-paragraph {
-    width: 100%;
+    width: 95%;
     align-self: center;
     text-align: left;
     font-weight: 385;
-    font-size: 4.8vw;
+    font-size: 3.8vw;
+    margin-left: 15px;
 }
 
 /*CSS for the awards boxes*/
@@ -132,6 +133,8 @@ p {
     display: flex;
     flex-direction: column;
     height: 100%;
+    align-self: center;
+
 }
 .col-pic.award {
     width: 100%;
@@ -140,15 +143,16 @@ p {
     background-color: black;
 }
 .img-grad, .img-award {
-    width: 100%;
+    width: 95%;
     justify-self: center;
+    align-self: center;
 }
 .col-paragraph.awards {
-    width: 100%;
-    align-self: center;
+    width: 95%;
     text-align: left;
     font-weight: 385;
-    font-size: 4.8vw;
+    font-size: 3.8vw;
+    margin-left: 2.54%;
 }
 .award-list {
     display: flex;
@@ -158,10 +162,12 @@ p {
     position: relative;
     list-style: none;
     background-color: white;
+    justify-self: center;
+    align-self: center;
 }
 .school-list li span {
     position: auto;
-    left: 0px;
+    align-self: center;
 }
 
 /*When we hit much larger screens change the structure of the website*/
@@ -203,11 +209,13 @@ p {
         height: 100%;
     }
     .col-paragraph {
-        width: 100%;
+        width: 95%;
         align-self: center;
         text-align: left;
         font-weight: 385;
-        font-size: 2.8vw;
+        font-size: 2.2vw;
+        margin-left: 10px;
+
     }
 
     .box.lewis {
@@ -261,9 +269,11 @@ p {
     }
     .col-paragraph.awards {
         grid-area: txt;
-        font-size: 2.8vw;
+        font-size: 2.1vw;
         align-self: auto;
         align-items: auto;
+        margin-top: 1.8%;
+        margin-left: 12px;
     }
 
     .reveal {
@@ -283,10 +293,10 @@ p {
 /*When we hit much larger screens change the structure of the website*/
 @media screen and (min-width: 850px) {
     .col-paragraph {
-        font-size: 1.50vw;
+        font-size: 1.8vw;
     }
     .col-paragraph.awards {
-        font-size: 2.0vw;
+        font-size: 1.8vw;
     }
     .box-awards {
         display: flex;

@@ -30,7 +30,7 @@
         <div class="container">
 
             <!--First box with welcome message and image of me-->
-            <div class="box intro reveal intro">
+            <div class="box intro">
                 <h1>Welcome To My Portfolio!</h1>
                 <div id="intro-box">
                     <img class="jack-profile" src="images/jack-profile.png">
@@ -193,24 +193,8 @@
         */
 
         //Watch for the click event on the anchor tag, if clicked scroll to bottom of page
-        let footLink = document.getElementById("contact-me");
+        let footLink = document.getElementById("contact-me")
 
-        //Try to remove the reveal action to happen to elements that are on top
-        var cards = document.querySelectorAll(".box");
-        count = 0
-
-        //Create loop to remove the reveal class from cards that are visible when on a new page
-        for (var i = 0; i < cards.length; i++) {
-            var car = cards[i];
-            const position = car.getBoundingClientRect();
-            const x = position.left;
-            const y = position.top;
-            
-            //When we get a card at the height of the starting cards, remove the reveal class so initial ones appear no matter how many there are
-            if(y <= 345) {
-                car.classList.remove('reveal')
-            }
-        }
         footLink.addEventListener("click", (e) => {
             window.scrollTo({
                 top: document.body.scrollHeight,

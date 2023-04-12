@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /*
 body, main {
     background-image: url("main-background.jpg");
@@ -25,8 +24,13 @@ body, main {
   .header {
     padding: 75px;
     position: relative;
-    background-image: url("banner-background.jpg"); 
-    background-size: cover;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    /**
+    background-image: url("ban-back.jpg"); 
+    background-size: cover;*/
     height: 10px;
   }
 
@@ -169,8 +173,10 @@ p {
 .footer {
     /*Creating padding which is effected by what's in the banner like the text*/
     /*text-align: center;*/
-    background-image: url("banner-background.jpg");
-    background-size: cover;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     position: relative;
     bottom: 0;
     width: 100%;
@@ -190,7 +196,7 @@ p {
 .phoneText {
   position: absolute;
   color: black;
-  top: 50%;
+  top: 48%;
   font-size: 16.4px;
   margin-left: 24px;
   padding: 0px 0px 0px 0px;
@@ -199,7 +205,7 @@ p {
 
 .emailText {
   position: absolute;
-  top: 28%;
+  top: 26%;
   font-size: 16.4px;
   margin-left: .8px;
   padding: 0px 0px 0px 0px;
@@ -212,7 +218,7 @@ p {
   grid-template-columns: auto auto;
   padding: 20px;
   position: absolute;
-  right: -2px;
+  right: 0px;
   top: 0%;
   height: 80px;
   

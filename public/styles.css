@@ -45,7 +45,7 @@ body, main {
 .brand-title {
   font-size: 1.2rem;
   margin: .5rem;
-  color: black;
+  color: rgb(20, 5, 88);
 }
 
 .navbar {
@@ -53,14 +53,13 @@ body, main {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  background-color: black;
+  background-color: rgb(20, 5, 88);
   color: white;
 }
 
 .navbar-links {
   display: none;
   width: 100%;
-
 }
 
 .navbar-links ul {
@@ -93,12 +92,12 @@ body, main {
   animation-name: colorTrans;
   animation-duration: .3s;
   background-color: white;
-  color: black;
+  color: rgb(20, 5, 88);
 }
 
 .navbar-links .active {
   background-color: white;
-  color: black;
+  color: rgb(20, 5, 88);
   width: 100%;
   /**display: flex;**/
 }
@@ -111,14 +110,14 @@ body, main {
 
 /*Hover animation functions*/
 @keyframes colorTrans {
-  from {background-color: black;}
+  from {background-color: rgb(20, 5, 88);}
   to {background-color: white;
-      color: black}
+      color: rgb(20, 5, 88)}
 }
 
 @keyframes colorBack {
   from {background-color: white;}
-  to {background-color: black;
+  to {background-color: rgb(20, 5, 88);
       color: white}
 }
 
@@ -284,7 +283,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: rgb(20, 5, 88);
   color: white;
   /*NEED TO MAKE IT NOT COLUMN TO GO TO ORIGINAL FLOW*/
   flex-direction: row;
@@ -331,25 +330,25 @@ p {
   animation-name: colorTrans;
   animation-duration: .35s;
   background-color: white;
-  color: black;
+  color: rgb(20, 5, 88);
 }
 
 .navbar-links .active {
   background-color: white;
-  color: black;
+  color: rgb(20, 5, 88);
   display: flex;
 }
 
 /*Hover animation functions*/
 @keyframes colorTrans {
-  from {background-color: black;}
+  from {background-color: rgb(20, 5, 88);}
   to {background-color: white;
-      color: black}
+      color: rgb(20, 5, 88)}
 }
 
 @keyframes colorBack {
   from {background-color: white;}
-  to {background-color: black;
+  to {background-color: rgb(20, 5, 88);
       color: white}
 }
 

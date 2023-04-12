@@ -158,10 +158,10 @@ ul {
 @media screen and (min-width: 450px) {
     /*For the paragraphs in the columns*/
     .box.paragraph {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .box-paragraph {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     /*For the text in the work section*/
     .box-paragraph.work {
@@ -359,7 +359,7 @@ ul {
     /*Get images same using boxes for hobbies*/
     .box-pictures.hobbies {
        /* background-color: aqua;*/
-        width: 100%;
+        width: 80%;
     }
     .img.hock, .img.fish {
         height: 100%;
@@ -392,7 +392,7 @@ ul {
     }
     .pantry-pic {
         /*background-color: aqua;*/
-        width: 100%
+        width: 70%
     }
     /*When we don't have an active reveal*/
     .reveal {

@@ -25,24 +25,6 @@
         <!--Insert the header using ejs-->
         <%- include('partials/header'); -%>
         
-        <!-- Slider main container -->
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="images/binary.png"></div>
-                <div class="swiper-slide"><img src="images/math.jfif"></div>
-                <div class="swiper-slide"><img src="images/lewis-university.jpg"></div>
-                <div class="swiper-slide"><img src="images/clc-illinois.jfif"></div>
-            </div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-
-        <!--Create auto slider for summarizing purposes-->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
         <!--Flexbox Layout for rest of website for this page-->
         <div class="container">
@@ -191,6 +173,7 @@
         
 
     <script>
+        /**
         const swiper = new Swiper('.swiper', {
             //Autoplay delay in milliseconds
             autoplay: {
@@ -207,10 +190,27 @@
             },
 
         });
+        */
 
         //Watch for the click event on the anchor tag, if clicked scroll to bottom of page
         let footLink = document.getElementById("contact-me");
 
+        //Try to remove the reveal action to happen to elements that are on top
+        var cards = document.querySelectorAll(".box");
+        count = 0
+
+        //Create loop to remove the reveal class from cards that are visible when on a new page
+        for (var i = 0; i < cards.length; i++) {
+            var car = cards[i];
+            const position = car.getBoundingClientRect();
+            const x = position.left;
+            const y = position.top;
+            
+            //When we get a card at the height of the starting cards, remove the reveal class so initial ones appear no matter how many there are
+            if(y <= 345) {
+                car.classList.remove('reveal')
+            }
+        }
         footLink.addEventListener("click", (e) => {
             window.scrollTo({
                 top: document.body.scrollHeight,

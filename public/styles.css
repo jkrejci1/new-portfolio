@@ -58,8 +58,11 @@ body, main {
 }
 
 .navbar-links {
-  display: none;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
   width: 100%;
+
 }
 
 .navbar-links ul {
@@ -105,9 +108,24 @@ body, main {
 /*When toggle button is pressed this css runs*/
 .navbar-links.active-menu {
   display: flex;
-  transition: transform 350ms ease-in;
-}
+  transition: transform 500ms ease-in;
+  max-height: 500px;
+  transition: max-height 0.5s ease-in;
+  animation: growDown 500ms ease-in-out forwards;
+  transform-origin: top center;
 
+}
+@keyframes growDown {
+  0% {
+      transform: scaleY(0)
+  }
+  80% {
+      transform: scaleY(1.035)
+  }
+  100% {
+      transform: scaleY(1)
+  }
+}
 /*Hover animation functions*/
 @keyframes colorTrans {
   from {background-color: rgb(20, 5, 88);}
@@ -293,6 +311,7 @@ p {
   /*SET BACK TO AUTO SO LINKS GO BACK TO HOW THEY WERE BEFORE ADJUSTING ON MAIN MOBILE VERSION OF CSS*/
   width: auto;
   display: flex;
+  max-height: 500px; /*Fixes disappearing nav links*/
 }
 
 .brand-title {

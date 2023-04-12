@@ -69,7 +69,6 @@ h1 {
     display: flex;
     flex-direction: column; /*First have flex-direction be column for mobile devices*/
     /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
-    margin-top: -.25rem;
     margin-bottom: 0rem;
     min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
     align-items: center; /*Align box to the center*/
@@ -241,7 +240,6 @@ h1 {
         grid-area: intro;
         left: 20%;
         width: 80%; /*Made intro box a little smaller*/
-        margin-top: 50px;
         margin-bottom: 50px;
     }
     /*Skills columns*/

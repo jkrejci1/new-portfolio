@@ -317,7 +317,7 @@ p {
   /*SET BACK TO AUTO SO LINKS GO BACK TO HOW THEY WERE BEFORE ADJUSTING ON MAIN MOBILE VERSION OF CSS*/
   width: auto;
   display: flex;
-  max-height: 500px; /*Fixes disappearing nav links*/
+  max-height: 700px; /*Fixes disappearing nav links*/
 }
 
 .brand-title {
@@ -332,12 +332,16 @@ p {
   flex-direction: row;
   width: auto;
   /*background-color: black;*/
+  align-items: center;
+  justify-content: center;
 }
 
 .navbar-links li {
   list-style: none;
   text-align: center;
   width: auto;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Use ease out to fade back to original when done hovering*/
@@ -347,7 +351,11 @@ p {
   text-decoration: none;
   color: white;
   transition: ease-in 0.35s; /*Needs to be same as animation duration or makes a double hover effect*/
-  padding: 1rem 1rem;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*Hover effects when hovering and after hovering (bottom 2)*/
@@ -356,12 +364,16 @@ p {
   animation-duration: .35s;
   background-color: white;
   color: rgb(20, 5, 88);
+  
 }
 
 .navbar-links .active {
   background-color: white;
   color: rgb(20, 5, 88);
   display: flex;
+  height: 100%;
+  justify-items: center;
+  text-align: center;
 }
 
 /*Hover animation functions*/
@@ -482,4 +494,18 @@ p {
   top: 20%;
 } */
 
-/*Add CSS for personal information, and images for profile links and possibly resume*/
+/*Make links even larger for larger screens*/
+@media screen and (min-width: 1000px) {
+  .navbar-links li a {
+    padding: 1.6rem 5.3rem;
+    font-size: 1.25rem;
+
+  }
+}
+/*Make links even larger for larger screens*/
+@media screen and (min-width: 1600px) {
+  .navbar-links li a {
+    padding: 1.6rem 8.3rem;
+    font-size: 1.7rem;
+  }
+}

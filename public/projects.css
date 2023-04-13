@@ -227,3 +227,35 @@ h2 {
     background-image: url("images/projects/serverstats.png"); 
     background-size: cover;
 }
+
+/*Grow boxes when screen size hits 1280*/
+@media screen and (min-width: 1600px) {
+    .card {
+        width: 500px;
+        height: 720px;
+        font-size: 1.5rem;
+    }
+    .card.url {
+        width: 500px;
+        height: 720px;
+    }
+    p {
+        font-size: 1.35rem;
+    }
+    .card-image {
+        height: 235px;
+    }
+    .srcCode {
+        font-size: 1.2rem;
+        padding: 20px 25px;
+    }
+    /*Add new lines when needed*/
+    .new-line-par::after {
+        content: "\a";
+        white-space: pre;
+    }
+    .new-line-par.pizza::after {
+        content: "\a\a";
+        white-space: pre;
+    }
+}

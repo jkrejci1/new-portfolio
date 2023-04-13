@@ -249,7 +249,7 @@ ul {
 
     /*For all boxes*/
     .box {
-        top: 0;
+        top: 0px;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -295,6 +295,7 @@ ul {
     /*Give the correct boxes its corresponding area*/
     .box.about-me {
         grid-area: about-me;
+        margin-top: 50px;
     }
     .box.hire-me {
         grid-area: hire-me;

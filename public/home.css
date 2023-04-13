@@ -384,6 +384,7 @@ h1 {
     }
     #skills-head {
         min-height: 77px;
+        font-size: 2.5vw;
     }
     .box.programming {
         grid-area: programming;
@@ -549,7 +550,7 @@ h1 {
     }
     .skill-description {
         color: black;
-        font-size: 1.25rem;
+        font-size: 1.3rem;
         padding-top: 1%;
     }
 }

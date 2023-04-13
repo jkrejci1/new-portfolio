@@ -241,6 +241,7 @@ h1 {
         left: 20%;
         width: 80%; /*Made intro box a little smaller*/
         margin-bottom: 50px;
+        margin-top: 50px;
     }
     /*Skills columns*/
     #skills-col {

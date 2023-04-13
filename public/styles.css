@@ -263,7 +263,12 @@ p {
   width: 40px;
   height: 50px;
 } 
-
+/*Make links smaller for smaller screens*/
+@media screen and (min-width: 500px) {
+  .navbar-links li a {
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
 
 /* Use a media query to cause this change at 500 pixles MOBILE FIRST*/
 @media screen and (min-width: 500px) {
@@ -351,7 +356,8 @@ p {
   text-decoration: none;
   color: white;
   transition: ease-in 0.35s; /*Needs to be same as animation duration or makes a double hover effect*/
-  padding: 1.5rem 1.5rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;  
   text-align: center;
   display: flex;
   align-items: center;
@@ -495,9 +501,15 @@ p {
 } */
 
 /*Make links even larger for larger screens*/
+@media screen and (min-width: 570px) {
+  .navbar-links li a {
+    padding: 1rem 1.6rem;
+  }
+}
+/*Make links even larger for larger screens*/
 @media screen and (min-width: 1000px) {
   .navbar-links li a {
-    padding: 1.6rem 5.3rem;
+    padding: 1.6rem 4.3rem;
     font-size: 1.25rem;
 
   }

@@ -42,7 +42,6 @@ body, main {
   font-weight: 650;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.656rem;
-
 }  
 
 /*NavBar CSS*/
@@ -515,9 +514,19 @@ p {
   }
 }
 /*Make links even larger for larger screens*/
+@media screen and (min-width: 1500px) {
+  .header {
+    padding: 100px;
+  }
+  #headName {
+    font-size: 3.5rem;
+  }
+}
+/*Make links even larger for larger screens*/
 @media screen and (min-width: 1600px) {
   .navbar-links li a {
     padding: 1.6rem 8.3rem;
     font-size: 1.7rem;
+    }
   }
 }

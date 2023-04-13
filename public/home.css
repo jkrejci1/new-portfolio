@@ -219,17 +219,18 @@ h1 {
 
     /*Picture of me in the welcome message*/
     .jack-profile {
-        max-width: 340px;
         padding-top: 10px;
         padding-bottom: 10px;
         border-radius: 50%;
         padding-left: 20px;
         padding-right: 30px;
+        margin-left: 15px;
+        width: 35%;
     }
     .box-paragraph {
         width: 55%;
         margin-bottom: 10px;
-        font-size: 1.15rem;
+        font-size: 1rem;
         margin-left: 30px;
         margin-right: 30px;
         padding-top: 10px;
@@ -350,17 +351,17 @@ h1 {
 
     /*Picture of me in the welcome message*/
     .jack-profile {
-        max-width: 340px;
         padding-top: 10px;
         padding-bottom: 10px;
         border-radius: 50%;
         padding-left: 20px;
         padding-right: 30px;
+        width: 35%;
     }
     .box-paragraph {
         width: 55%;
         margin-bottom: 10px;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
         margin-left: 30px;
         margin-right: 30px;
         padding-top: 10px;
@@ -428,4 +429,127 @@ h1 {
         padding-top: 1%;
     }
     
+}
+
+@media screen and (min-width: 1190px) {
+    .box-paragraph {
+        width: 55%;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 10px;
+    }
+}
+
+/*Make links even larger for larger screens*/
+@media screen and (min-width: 1600px) {
+    /*The first flexbox containing the intro*/
+
+    /*Picture of me in the welcome message*/
+    .jack-profile {
+        width: 35%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        border-radius: 50%;
+        padding-left: 20px;
+        padding-right: 30px;
+        margin-bottom: 100px;
+        margin-top: 50px;
+    }
+    .box-paragraph {
+        width: 55%;
+        margin-bottom: 10px;
+        font-size: 2rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 10px;
+    }
+
+    /*Take all the boxes labeled as is and give them a grid-area for each*/
+    .box.intro {
+        grid-area: intro;
+        left: 20%;
+        width: 80%; /*Made intro box a little smaller*/
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    /*Direct sizing for the images*/
+    .skill-img {
+        height: 140px;
+        width: 90px;
+    }
+    .skill-img-direct {
+        width: 85px;
+        height: 95px;
+    }
+    /*Needed to adjust the PHP logo to make it look better*/
+    .skill-img-direct-php {
+        max-width: 100px;
+        min-height: 95px;
+    }
+    .skill-description {
+        color: black;
+        font-size: 1.05rem;
+        padding-top: 1%;
+    }
+
+}
+@media screen and (min-width: 2000px) {
+    .box-paragraph {
+        width: 55%;
+        margin-bottom: 10px;
+        font-size: 2.5rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 10px;
+    }
+    /*Direct sizing for the images*/
+    .skill-img {
+        height: 170px;
+        width: 120px;
+    }
+    .skill-img-direct {
+        width: 115px;
+        height: 125px;
+    }
+    /*Needed to adjust the PHP logo to make it look better*/
+    .skill-img-direct-php {
+        max-width: 130px;
+        min-height: 125px;
+    }
+    .skill-description {
+        color: black;
+        font-size: 1.15rem;
+        padding-top: 1%;
+    }
+}
+@media screen and (min-width: 2400px) {
+    .box-paragraph {
+        width: 55%;
+        margin-bottom: 10px;
+        font-size: 3rem;
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 10px;
+    }
+    /*Direct sizing for the images*/
+    .skill-img {
+        height: 200px;
+        width: 150px;
+    }
+    .skill-img-direct {
+        width: 145px;
+        height: 155px;
+    }
+    /*Needed to adjust the PHP logo to make it look better*/
+    .skill-img-direct-php {
+        max-width: 160px;
+        min-height: 155px;
+    }
+    .skill-description {
+        color: black;
+        font-size: 1.25rem;
+        padding-top: 1%;
+    }
 }

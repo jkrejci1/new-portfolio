@@ -153,6 +153,13 @@ h2 {
         transform: translateY(0px); /*We set revealpoint to 150*/
         opacity: 1;
     }
+    .reveal:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.07);
+        transition: all .35s ease;
+    }
 }
 /*The individual images*/
 .car-1 {
@@ -257,5 +264,25 @@ h2 {
     .new-line-par.pizza::after {
         content: "\a\a";
         white-space: pre;
+    }
+    /*Create hover effect*/
+    .card:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.07);
+        transition: all .35s ease;
+    }
+    .card.reveal:hover {
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        transform: scale(1.07);
+        transition: all .35s ease;
+    }
+    .srcCode:hover {
+        animation-name: colorTrans;
+        background-color: white;
+        color: black;
     }
 }

@@ -187,7 +187,10 @@ h1 {
         /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
         max-height: 600px;
     }
-
+    .container {
+        transform: scale(.96);
+        transform-origin: top;
+    }
     .swiper-slide img{
         width: 100%;
         /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/

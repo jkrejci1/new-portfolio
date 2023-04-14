@@ -185,6 +185,9 @@ ul {
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;
         margin-bottom: 50px;
+        transform: scale(0.7);
+        transform-origin: top;
+        margin-bottom: -1200px;
     }
     h1 {
         font-size: 3vw;
@@ -276,6 +279,8 @@ ul {
         /*background-color: red;*/
         justify-content: start;
         height: auto;
+        font-size: 1.3rem;
+
     }
     #journey-box {
         margin-bottom: 90px;
@@ -350,11 +355,13 @@ ul {
         width: 95%;
         /*background-color: red;*/
         height: 90%;
+        font-size: 1.3rem;
     }
     .box-paragraph.volunteer {
         width: 95%;
         /*background-color: red;*/
         height: 60%;
+        font-size: 1.3rem;
     }
 
     /*Get images same using boxes for hobbies*/
@@ -413,10 +420,19 @@ ul {
 /*Make links even larger for larger screens*/
 @media screen and (min-width: 1600px) {
     .box.paragraph {
-        font-size: 1.3rem;
+        font-size: 1.6rem;
     }
-    .box-paragraph {
-        font-size: 1.3rem;
+    .box-paragraph.hobbies {
+        width: 95%;
+        /*background-color: red;*/
+        height: 90%;
+        font-size: 1.6rem;
+    }
+    .box-paragraph.volunteer {
+        width: 95%;
+        /*background-color: red;*/
+        height: 60%;
+        font-size: 1.6rem;
     }
     .shake-box {
         /*background-color: aqua;*/
@@ -427,10 +443,19 @@ ul {
 }
 @media screen and (min-width: 2000px) {
     .box.paragraph {
-        font-size: 1.7rem;
+        font-size: 1.9rem;
     }
-    .box-paragraph {
-        font-size: 1.7rem;
+    .box-paragraph.hobbies {
+        width: 95%;
+        /*background-color: red;*/
+        height: 90%;
+        font-size: 1.9rem;
+    }
+    .box-paragraph.volunteer {
+        width: 95%;
+        /*background-color: red;*/
+        height: 60%;
+        font-size: 1.9rem;
     }
     .shake-box {
         /*background-color: aqua;*/
@@ -440,10 +465,19 @@ ul {
 }
 @media screen and (min-width: 2400px) {
     .box.paragraph {
-        font-size: 2rem;
+        font-size: 2.3rem;
     }
-    .box-paragraph {
-        font-size: 2rem;
+    .box-paragraph.hobbies {
+        width: 95%;
+        /*background-color: red;*/
+        height: 90%;
+        font-size: 2.3rem;
+    }
+    .box-paragraph.volunteer {
+        width: 95%;
+        /*background-color: red;*/
+        height: 60%;
+        font-size: 2.3rem;
     }
     .shake-box {
         /*background-color: aqua;*/

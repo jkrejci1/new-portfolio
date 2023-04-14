@@ -271,7 +271,7 @@ h2 {
         background-color: black;
         color: white;
         cursor: pointer;
-        transform: scale(1.07);
+        transform: scale(1.04);
         transition: all .35s ease;
     }
     .card.reveal:hover {

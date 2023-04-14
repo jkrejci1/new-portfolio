@@ -180,6 +180,10 @@ p {
                 "awards awards awards awards";
         min-height: 100vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;
+        transform: scale(0.8);
+        transform-origin: top;
+        margin-bottom: -100px;
+
     }
     h1 {
         font-size: 3.6vw;
@@ -304,7 +308,7 @@ p {
         width: 75%;
         flex-direction: row;
         background-color: white;
-        margin-bottom: 50px;
+        margin-bottom: 50px; 
     }
     h1 {
         font-size: 3vw;
@@ -319,6 +323,5 @@ p {
         /*Template areas for the site*/
         grid-template-areas: 
                 "lewis lewis clc clc";
-        width: 90%;
     }
 }

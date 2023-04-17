@@ -46,7 +46,6 @@
 
         //Take all the links on the page to be able to compare to the current one we're on 
         const navLinks = document.querySelectorAll('nav a').forEach(link => {
-            console.log("Link:", link)
             //If the pathname of a link in the loop matches the activePage, set that link to have the 'active' class to keep it white
             if (link.pathname == activePage) {
                 link.classList.add('active')
@@ -59,14 +58,12 @@
         const toggleButton = document.getElementsByClassName('toggle-button')[0]
         //Get the navbar links we have (only one as well select 0th)
         const navbarLinks = document.getElementsByClassName('navbar-links')[0]
-
-        console.log("navbar links:", navbarLinks)
         
         toggleButton.addEventListener('click', () => {
             navbarLinks.classList.toggle('active-menu')
 
             //Checks what the class is for navbarLinks
-            console.log("navbar links:", navbarLinks)
+            //console.log("navbar links:", navbarLinks)
         })
 
     </script>

@@ -205,7 +205,6 @@
             const position = car.getBoundingClientRect();
             const x = position.left;
             const y = position.top;
-            console.log("Card:", car, "Y:", y)
             //When we get a card at the height of the starting cards, remove the reveal class so initial ones appear no matter how many there are
             if(y <= 450) {
                 car.classList.remove('reveal')

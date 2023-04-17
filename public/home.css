@@ -179,23 +179,12 @@ h1 {
 
 /*When media screen is at least 700 px*/
 @media screen and (min-width: 700px) {
-    /*Slider CSS COVER SCREEEN AND MAKE A LITTLE SHORTER*/
-    .swiper {
-        /*Width of what the swiper covers*/
-        width: 100%;
-        margin-top: 0rem;
-        /*ALSO SET A MAX HEIGHT TO FIX THE IMAGE SIZING ISSUE*/
-        max-height: 600px;
-    }
+
     .container {
         transform: scale(.96);
         transform-origin: top;
     }
-    .swiper-slide img{
-        width: 100%;
-        /*DID THIS TO FIX THE PICTURE SIZING ISSUE*/
-        aspect-ratio: 4/2;
-    }
+
     h1 {
         font-size: 3vw;
     }

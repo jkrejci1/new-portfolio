@@ -95,15 +95,15 @@ p {
 /*CSS for the cards with our projects*/
 .card {
     background-color: white;
-    width: 300px;
+    width: 380px;
     /*MIGHT NEED TO PLAY WITH HEIGHT IF WE WANT ALL SAME*/
-    height: 480px;
+    height: 500px;
     margin: 10px;
     border-radius: 15px;
     border: 4px solid rgb(0, 119, 255);
 }
 .card.url {
-    height: 480px;
+    height: 510px;
 }
 /*Properties that are for all the images*/
 .card-image {
@@ -128,6 +128,9 @@ h2 {
         margin: 14px;
         border-radius: 15px;
         transition: ease-in 0.35s;
+    }
+    .card.url {
+        height: 480px;
     }
     /*Create hover effect*/
     .card:hover {

@@ -173,24 +173,6 @@
         
 
     <script>
-        /**
-        const swiper = new Swiper('.swiper', {
-            //Autoplay delay in milliseconds
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            // Optional parameters
-            loop: true,
-
-            // Navigation arrows
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
-
-        });
-        */
 
         //Watch for the click event on the anchor tag, if clicked scroll to bottom of page
         let footLink = document.getElementById("contact-me")
@@ -213,7 +195,7 @@
             for(var i = 0; i< reveals.length; i++) {
                 var windowheight = window.innerHeight;
                 var revealtop = reveals[i].getBoundingClientRect().top;
-                var revealpoint = 120;
+                var revealpoint = 50;
                 
                 //If we get to the reveal point we want set the class to active
                 if(revealtop < windowheight - revealpoint) {

@@ -80,7 +80,7 @@ p {
 
 /*Container for our flex items*/
 .container {
-    margin-top: 10px;
+    margin-top: 15px;
     display: flex;
     /*background-color: black;*/ /*DONE TO CHECK FOR WHERE OUR CONTAINER IS*/
     margin-bottom: 0rem;
@@ -89,7 +89,7 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 /*CSS for the cards with our projects*/

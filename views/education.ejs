@@ -70,8 +70,8 @@
             <div class="box-awards reveal">
                 <!--Make this display flex row to get pics side by side-->
                 <div class="awards-pics">
-                    <img class="img-grad" src="images/education-photos/graduation.jpg">
-                    <img class="img-award" src="images/education-photos/award.jpg">
+                    <img class="img-grad photo" data-src="images/education-photos/graduation.jpg">
+                    <img class="img-award photo" data-src="images/education-photos/award.jpg">
                 </div>
                 <div class="col-paragraph awards">
                     <ul class="award-list">
@@ -92,6 +92,14 @@
         <%- include('partials/footer'); -%>
 
     </body>
+        <!--Insert javascript for lazy loading images-->
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+        <script>
+            //Create the lazy load object
+            const myLazyLoad = new LazyLoad({
+                elements_selector: ".photo"
+            })
+        </script>
     <script>
         //Create code for revealing skill columns
         window.addEventListener('scroll', reveal);

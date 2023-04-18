@@ -45,7 +45,7 @@
                 <div class="box hire-me reveal">
                     <h1>Why You Should Hire Me</h1>
                     <div class="shake-box">
-                        <img class="img hand-shake" src="images/who-am-i/shake.png">
+                        <img class="img hand-shake photo" data-src="images/who-am-i/shake.png">
                     </div>
                     <div class="box paragraph">
                         <p class="about-text">If you want someone that is passionate about their job, and cares greatly about their craft, I’m 
@@ -74,7 +74,7 @@
                     <div class="workbox">
                         <h1 class="work-header">Fritzls Restaurant and Pub</h1>
                     </div>
-                    <img class="img fritz" src="images/work-photos/fritzls.jpg">
+                    <img class="img fritz photo" data-src="images/work-photos/fritzls.jpg">
                     <div class="box-paragraph work">
                         <ul>
                             <li><b>Job:</b> Busboy</li>
@@ -89,7 +89,7 @@
                     <div class="workbox">
                         <h1 class="work-header">Gordon Food Service</h1>
                     </div>
-                    <img class="img gfs" src="images/work-photos/gfs.jpg">
+                    <img class="img gfs photo" data-src="images/work-photos/gfs.jpg">
                     <div class="box-paragraph work">
                         <ul>
                             <li><b>Job:</b> Store Associate</li>
@@ -104,7 +104,7 @@
                     <div class="workbox">
                         <h1 class="work-header">Scoreboard Bar and Grill</h1>
                     </div>
-                    <img class="img scoreboard" src="images/work-photos/scoreboard.jpg">
+                    <img class="img scoreboard photo" data-src="images/work-photos/scoreboard.jpg">
                     <div class="box-paragraph work">
                         <ul>
                             <li><b>Job:</b> Busboy</li>
@@ -120,7 +120,7 @@
                     <div class="workbox">
                         <h1 class="work-header">Hawthorn Gardens</h1>
                     </div>
-                    <img class="img hawthorn" src="images/work-photos/hawthorn-gardens.jpg">
+                    <img class="img hawthorn photo" data-src="images/work-photos/hawthorn-gardens.jpg">
                     <div class="box-paragraph work">
                         <ul>
                             <li><b>Job:</b> Stockboy</li>
@@ -138,7 +138,7 @@
                 <div class="box hockey">
                     <h1>Hockey</h1>
                     <div class="box-pictures hobbies">
-                        <img class="img hock" src="images/hobbies/hockey.jpg">
+                        <img class="img hock photo" data-src="images/hobbies/hockey.jpg">
                     </div>
                     <div class="box-paragraph hobbies">
                         <p>I started playing hockey when I was little with friends and always enjoyed playing goalie. 
@@ -163,7 +163,7 @@
                 <div class="box fishing">
                     <h1>Fishing</h1>
                     <div class="box-pictures hobbies">
-                        <img class="img hock" src="images/hobbies/fishing.jpg">
+                        <img class="img hock photo" data-src="images/hobbies/fishing.jpg">
                     </div>
                     <div class="box-paragraph hobbies">
                         <p>Fishing has always been my biggest hobby since I could walk, it’s something that I find so 
@@ -190,7 +190,7 @@
                 <div class="box pantry">
                     <h1>St. Vincent de Paul Food Pantry</h1>
                     <div class="pantry-pic">
-                        <img class="img st-francis" src="images/work-photos/st-francis.jpg">
+                        <img class="img st-francis photo" data-src="images/work-photos/st-francis.jpg">
                     </div>
                     <div class="box-paragraph volunteer">
                         <p>I’ve spent my later years in high school volunteering at the St Vincent de Paul food pantry in 
@@ -213,7 +213,15 @@
 
         <!--Insert the footer using ejs-->
         <%- include('partials/footer'); -%>
-
+        
+        <!--Insert javascript for lazy loading images-->
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+        <script>
+            //Create the lazy load object
+            const myLazyLoad = new LazyLoad({
+                elements_selector: ".photo"
+            })
+        </script>
         <!--JavaScript-->
         <script>
             //Create code for revealing skill columns

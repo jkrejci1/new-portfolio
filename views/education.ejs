@@ -88,18 +88,19 @@
         </div>
 
 
-        <!--Insert the footer using ejs-->
-        <%- include('partials/footer'); -%>
+    
+    <!--Insert the footer using ejs-->
+    <%- include('partials/footer'); -%>
 
-    </body>
-        <!--Insert javascript for lazy loading images-->
-        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
-        <script>
-            //Create the lazy load object
-            const myLazyLoad = new LazyLoad({
-                elements_selector: ".photo"
-            })
-        </script>
+    
+    <!--Insert javascript for lazy loading images-->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
+    <script>
+        //Create the lazy load object
+        const myLazyLoad = new LazyLoad({
+            elements_selector: ".photo"
+        })
+    </script>
     <script>
         //Create code for revealing skill columns
         window.addEventListener('scroll', reveal);
@@ -120,4 +121,5 @@
             }
         }
     </script>
+    </body>
 </html>

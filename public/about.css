@@ -219,7 +219,7 @@ ul {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         /*Template areas for the site*/
         grid-template-areas: 
-                "fritzls-work gfs-work scoreboard-work hawthorn-work";
+                "FCPGI-work DoorDash-work gfs-work hawthorn-work";
         min-height: 50vh; /*NEED MIN OR IT WONT GO PAST ONE PAGE!!*/
         justify-items: center;  
         /*background-color: black; FOR REFERENCE*/
